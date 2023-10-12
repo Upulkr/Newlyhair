@@ -1,12 +1,16 @@
-import { Home, Profile, SignIn, SignUp } from "@/pages";
+// import { home, } from "@/pages";
 import {
   HomeIcon,
   UserCircleIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
-  DocumentTextIcon,
+ 
 } from "@heroicons/react/24/solid";
 
+import About from "./pages/About";
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Services from './pages/Services'
 export const routes = [
   {
     icon: HomeIcon,
@@ -16,26 +20,26 @@ export const routes = [
   },
   {
     icon: UserCircleIcon,
-    name: "profile",
-    path: "/profile",
-    // element: <Profile />,
+    name: "Services",
+    path: "/services",
+    element: <Services />,
   },
   {
     icon: ArrowRightOnRectangleIcon,
     name: "About Us",
-    path: "/sign-in",
-    // element: <SignIn />,
+    path: "/about",
+    element: <About/>,
   },
   {
     icon: UserPlusIcon,
-    name: "Sign Up",
-    path: "/sign-up",
-    // element: <SignUp />,
+    name: "Contact Us",
+    path: "/contact",
+    element: <Contact />,
   },
   // {
   //   icon: DocumentTextIcon,
-  //   name: "Docs",
-  //   href: "https://www.material-tailwind.com/docs/react/installation",
+  //   name: "Book Online",
+  //   href: "",
   //   target: "_blank",
   //   element: "",
   // },

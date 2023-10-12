@@ -21,8 +21,8 @@ export function Navbar({ routes }) {
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      {routes.map(({ name,  }) => (
+    <ul className="mb-7 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      {routes.map(({ name,icon,path,  }) => (
         <Typography
           key={name}
           as="li"
@@ -30,10 +30,16 @@ export function Navbar({ routes }) {
           color="inherit"
           className="capitalize"
         >
-          {/* {href ? (
-            <a
-              // href={href}
-              // target={target}
+{/* 
+          <Link
+            to={path}
+            target={element}
+            className="flex items-center gap-1 p-1 font-normal"
+          /> */}
+          
+            {/* <Link
+              href={path}
+              target={element}
               className="flex items-center gap-1 p-1 font-normal"
             >
               {icon &&
@@ -41,11 +47,11 @@ export function Navbar({ routes }) {
                   className: "w-[18px] h-[18px] opacity-75 mr-1",
                 })}
               {name}
-            </a>
-          ) : (
+            </Link> */}
+           
             <Link
-              // to={path}
-              // target={target}
+              to={path}
+            
               className="flex items-center gap-1 p-1 font-normal"
             >
               {icon &&
@@ -54,15 +60,15 @@ export function Navbar({ routes }) {
                 })}
               {name}
             </Link>
-          )} */}
+          
         </Typography>
       ))}
     </ul>
   );
 
   return (
-    <MTNavbar color="transparent" className="p-3">
-      <div className="container mx-auto flex items-center justify-between text-white">
+    <MTNavbar color="transparent" className="p-3 mb-11" >
+      <div className="  container mx-auto flex items-center justify-between text-white">
         <Link to="/">
           <Typography className="ml-2 mr-4 cursor-pointer py-1.5 font-bold">
             Saloon Noya

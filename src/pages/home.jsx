@@ -28,7 +28,7 @@ export function Home() {
         </div>
 
         {/* <div className="absolute top-0 h-full w-full bg-[url('https://www.freepik.com/free-photo/woman-washing-head-hairsalon_5912210.htm#query=hair%20spa&position=0&from_view=keyword&track=ais')] bg-cover bg-center" /> */}
-        <div className="absolute top-0 h-full w-full bg-black/75 bg-cover bg-center" />
+        <div className="absolute top-0 h-full w-full bg-black/40 bg-cover bg-center" />
         <div className="max-w-8xl container relative mx-auto">
           <div className="flex flex-wrap items-center">
             <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">

@@ -6,22 +6,37 @@ import {
 
 export const contactData = [
   {
-    title: "Excelent Services",
+    id:1,
+    title: "Call Us",
     icon: StarIcon,
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    email:'support@example.com',
+    call:"+1 234-567-89",
+    svg:""
+     ,
   },
-  {
-    title: "Your beauty is our assest",
+  {  id:2,
+    title: "Questions",
     icon: PresentationChartLineIcon,
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+    email:
+      "sales@example.com.",
+      call:"+1 234-567-89",
+      svg:"http://www.w3.org/2000/svg"
   },
-  {
-    title: "Cleanliness",
-    icon: RocketLaunchIcon,
-    description:
-      "Some quick example text to build on the card title and make up the bulk of the card's content.",
+  { id:3,
+    title: "CEO",
+    icon: PresentationChartLineIcon,
+    email:
+      "sales@example.com.",
+      call:"+1 234-567-89",
+      svg:"http://www.w3.org/2000/svg"
+  },
+  { id:4,
+    title: "Head of Stylist",
+    icon: PresentationChartLineIcon,
+    email:
+      "bugs@example.com.",
+      call:"+1 234-567-89",
+      svg:"http://www.w3.org/2000/svg"
   },
 ];
 

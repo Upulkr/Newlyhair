@@ -9,8 +9,8 @@ import {
 export function FeatureCard({ img, title, description }) {
   return (
     <>
-      <>
-        <Card className="rounded-2xl shadow-lg shadow-gray-500/10">
+      <div className="">
+        <Card className="rounded-2xl shadow-lg shadow-gray-500/10 m-2">
           <CardBody className="px-8 text-center">
             <img
               variant="gradient"
@@ -27,7 +27,7 @@ export function FeatureCard({ img, title, description }) {
             </Typography>
           </CardBody>
         </Card>
-      </>
+      </div>
     
     </>
   );
