@@ -14,7 +14,7 @@ import Services from './pages/Services'
 export const routes = [
   {
     icon: HomeIcon,
-    name: "home",
+    name: "Home",
     path: "/",
     element: <Home />,
   },
