@@ -9,7 +9,7 @@ import {
 
 import About from "./pages/About";
 import Contact from './pages/Contact'
-import Home from './pages/Home'
+import Home from './pages/home'
 import Services from './pages/Services'
 export const routes = [
   {
