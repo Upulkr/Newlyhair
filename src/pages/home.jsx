@@ -47,7 +47,7 @@ export function Home() {
         </div>
       </div>
 
-      <section className="-mt-32 bg-gray-50 px-4 pb-20 pt-4">
+      <section className="-mt-32  bg-gray-50 px-4 pb-20 pt-4  bg-blue-gray-200">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ title, img, description }) => (
@@ -61,16 +61,10 @@ export function Home() {
           </div>
           <div className="mt-32 flex flex-wrap items-center">
             <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
+              {/* <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
                 <UsersIcon className="h-6 w-6 text-blue-gray-900" />
-              </div>
-              <Typography
-                variant="h3"
-                className="mb-3 font-bold"
-                color="blue-gray"
-              >
-                Happy Customers
-              </Typography>
+              </div> */}
+            
               {/* <Typography className="mb-8 font-normal text-blue-gray-500">
                 Don't let your uses guess by attaching tooltips and popoves to
                 any element. Just make sure you enable them first via
@@ -114,14 +108,12 @@ export function Home() {
         </div>
         <HappyCustomers />
       </section>
-      <section className="px-4 pb-48 pt-20">
+      <section className="px-4 pb-48 pt-20  bg-blue-gray-200">
         <div className="container mx-auto">
-          <PageTitle heading="Here are our heroes">
-            {/* According to the National Oceanic and Atmospheric Administration,
-            Ted, Scambos, NSIDClead scentist, puts the potentially record
-            maximum. */}
+          <PageTitle heading="Here are our Team">
+  
           </PageTitle>
-          <div className="mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
+          <div className=" mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
             {teamData.map(({ img, name, position, socials }) => (
               <TeamCard
                 key={name}
@@ -142,12 +134,10 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section className="relative bg-blue-gray-50/50 px-4 py-24">
+      {/* <section className="relative bg-blue-gray-50/50 px-4 py-24">
         <div className="container mx-auto">
           <PageTitle heading="Our Goals">
-            {/* Put the potentially record low maximum sea ice extent tihs year down
-            to low ice. According to the National Oceanic and Atmospheric
-            Administration, Ted, Scambos. */}
+    
           </PageTitle>
           <div className="mx-auto mb-48 mt-20 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
             {contactData.map(({ title, icon, description }) => (
@@ -185,9 +175,9 @@ export function Home() {
             </Button>
           </form>
         </div>
-      </section>
+      </section> */}
       <div className="bg-blue-gray-50/50">
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </>
   );
