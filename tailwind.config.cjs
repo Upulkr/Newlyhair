@@ -6,6 +6,7 @@ module.exports = withMT({
   theme: {
     extend: {},
   },
+  variant:[],
   plugins: [require("tw-elements/dist/plugin")],
   darkMode: "class",
 });

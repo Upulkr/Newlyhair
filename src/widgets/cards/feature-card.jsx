@@ -10,7 +10,7 @@ export function FeatureCard({ img, title, description }) {
   return (
     <>
       <div className="">
-        <Card className=" bg-blue-gray-50 rounded-2xl shadow-lg m-2">
+        <Card className=" bg-blue-gray-50 rounded-2xl shadow-lg m-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 ...">
           <CardBody className="px-8 text-center">
             <img
               variant="gradient"

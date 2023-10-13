@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardBody,
@@ -14,8 +14,10 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import HappyCustomers from "./HappyCustomers";
+import Customerss from "./Customerss";
 
 export function Home() {
+  
   return (
     <>
       <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16">
@@ -56,6 +58,8 @@ export function Home() {
                 title={title}
                 img={img}
                 description={description}
+       
+
               />
             ))}
           </div>
@@ -106,20 +110,32 @@ export function Home() {
           </div>
     
         </div>
-        <HappyCustomers />
+        <div>   <Typography
+                variant="h3"
+                className="mb-3 font-bold text-center"
+                color="blue-gray"
+              >
+                Happy Customers
+              </Typography>
+        <Customerss /></div>
+     
+       
       </section>
       <section className="px-4 pb-48 pt-20  bg-blue-gray-200">
+        
         <div className="container mx-auto">
           <PageTitle heading="Here are our Team">
   
           </PageTitle>
-          <div className=" mt-24 grid grid-cols-1 gap-12 gap-x-24 md:grid-cols-2 xl:grid-cols-4">
-            {teamData.map(({ img, name, position, socials }) => (
+          <div className="flex items-center justify-center p-10">
+            {teamData.map(({ img, name, position, socials,id, }) => (
               <TeamCard
                 key={name}
                 img={img}
                 name={name}
                 position={position}
+             
+                id={id}
                 socials={
                   <div className="flex items-center gap-2">
                     {socials.map(({ color, name }) => (
@@ -178,7 +194,9 @@ export function Home() {
       </section> */}
       <div className="bg-blue-gray-50/50">
         <Footer />
+   
       </div>
+      {/* <Customerss/> */}
     </>
   );
 }

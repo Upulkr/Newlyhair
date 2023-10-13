@@ -1,5 +1,5 @@
 export const teamData = [
-  {
+  {id:1,
     img: "/img/team-1.jpg",
     name: "Ryan Tompson",
     position: "Stylist",
@@ -18,7 +18,7 @@ export const teamData = [
       },
     ],
   },
-  {
+  {id:1,
     img: "/img/team-2.jpg",
     name: "Romina Hadid",
     position: "Therapist",
@@ -37,7 +37,7 @@ export const teamData = [
       },
     ],
   },
-  {
+  {id:1,
     img: "/img/team-3.jpg",
     name: "Alexa Smith",
     position: "Make Up Artist",
@@ -56,7 +56,7 @@ export const teamData = [
       },
     ],
   },
-  {
+  {id:1,
     img: "/img/team-4.png",
     name: "Jenna Kardi",
     position: "Founder and CEO",

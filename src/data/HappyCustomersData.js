@@ -1,5 +1,5 @@
 export const Customers=[{
-  id:2,
+  id:1,
     img: "/img/customers/1.jpg",
     name: "Marry Keal",
     // position: "Stylist",
