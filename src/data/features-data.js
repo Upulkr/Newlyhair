@@ -50,7 +50,7 @@ export const featuresData = [
   {
     // color: "teal",
     title: "Enzymatic Sea Mud Wrap",
-    img: "./img/body/enzy.png",
+    img: "./img/body/3.jpg",
     description:
       "Detoxify, exfoliate and nourish your body with a purifying seaweed and mineral mud poultice sealed in a warm, relaxing wrap. Infused with aromatic botanical extracts and fruit enzymes, this treatment leaves the skin smooth and supple while eliminating your water weight. 45 Minutes",
   },

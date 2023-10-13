@@ -14,9 +14,9 @@ export function FeatureCard({ img, title, description }) {
           <CardBody className="px-8 text-center">
             <img
               variant="gradient"
-              size="lg"
+              // size="lg"
               // color={color}
-              className="pointer-events-none mb-6 rounded-full"
+              className="pointer-events-none mb-6 rounded-full    "
               src={img}
             />
             <Typography variant="h5" className="mb-2" color="blue-gray">
