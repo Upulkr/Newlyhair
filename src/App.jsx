@@ -1,13 +1,16 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
 import routes from "@/routes";
+import Switcher from "./pages/Switcher";
 
 function App() {
   return (
     <>
-      <div className="fixed top-0  container absolute left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-        <Navbar routes={routes} />
+      <div className="fixed top-0  container left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
+    <Navbar routes={routes} />
+    
       </div>
+  
       <Routes>
         {routes.map(
           ({ path, element }, key) =>

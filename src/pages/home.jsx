@@ -15,14 +15,14 @@ import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import HappyCustomers from "./HappyCustomers";
 import Customerss from "./Customerss";
-import DarkMode from "./DarkMode";
+import DarkMode from "./Switcher";
 
 export function Home() {
   
   return (
     <> 
-      <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16">
-      
+      <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16 dark:bg-white">
+   
         {/* <div
           className="absolute top-0 h-full w-full bg-cover bg-center"
           style={{ backgroundImage: `url('./imag/hairbackground.jpg')` }}

@@ -3,8 +3,8 @@ import { FeatureCard } from "@/widgets/cards"
 
 function Services() {
     return (<div>     <div className="my-14 "> <section className=" bg-gray-50 px-4 pb-20 pt-2 ">
-      <div className="absolute top-0   bg-no-repeat bg-cover h-screen ">
-          <img src="/img/service.jpg"></img>
+      <div className="absolute top-0   bg-no-repeat bg-cover w-full h-screen  bg-center ">
+          <img  className=''src="/img/service.jpg"></img>
         </div>
      <div className="container mx-auto mt-10">
        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

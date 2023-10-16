@@ -9,6 +9,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Switcher from '../../pages/Switcher';
 
 export function Navbar({ routes }) {
   const [openNav, setOpenNav] = React.useState(false);
@@ -68,12 +69,13 @@ export function Navbar({ routes }) {
   );
 
   return (
-    <MTNavbar color="transparent" className="p-3 mb-11" >
+    <MTNavbar color="transparent" className="p-3 mb-11" >     
       <div className="  container mx-auto flex items-center justify-between text-white">
         <Link to="/">
           <Typography className="ml-2 mr-4 cursor-pointer py-1.5 font-bold">
             Saloon Noya
           </Typography>
+      
         </Link>
         <div className="hidden lg:block">{navList}</div>
         <div className="hidden gap-2 lg:flex"></div>
@@ -95,15 +97,19 @@ export function Navbar({ routes }) {
         className="rounded-xl bg-white px-4 pb-4 pt-2 text-blue-gray-900"
         open={openNav}
       >
-        <div className="container mx-auto">
+        
+              <div className="container mx-auto">
           {navList}
 
           {/* {React.cloneElement(action, {
             className: "w-full block",
           })} */}
         </div>
+     
       </MobileNav>
+   {/* <Switcher/> */}
     </MTNavbar>
+    
   );
 }
 

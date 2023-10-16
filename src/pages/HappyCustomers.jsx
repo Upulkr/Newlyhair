@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 function HappyCustomers() {
   return (
-    <div className=" m-16 justify-center flex flex-row flex-wrap gap-6 md:gap-x-6 xl:gap-x-12 ">
+    <div className=" md:grid-cols-2 lg:grid-cols-3 m-16 justify-center flex flex-row flex-wrap gap-6 md:gap-x-6 xl:gap-x-12 ">
       
       {Customers.map((customer) => (
         <Newcus key={customer.id} name={customer.name} comment={customer.comment} img={customer.img} />

@@ -1,83 +1,82 @@
-import React from 'react';
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Typography,
-  Button,
-  IconButton,
-  Input,
-  Textarea,
-} from "@material-tailwind/react";
-import contactdata from '../data/contact-data';
-import ContactMap from './ContactMap';
+import OpenTimes from "@/data/OpenTimes"
+import OpenHours from "./OpenHours"
 
 function Contact() {
-  return (
-    
-    <section className="relative">
-       
-      <img src='./img/p.jpg 'alt="img"></img>
-   
-    <div className="container px-6 py-12 mx-auto mt-9 absolute  bottom-0 bg-black/60 ">
-        <div>
-            <p className="font-bold text-white">Contact us</p>
-
-            <h1 className="mt-2 text-2xl font-semibold text-white">Get in touch</h1>
-
-            <p className="mt-3 text-white">Our friendly team would love to hear from you.</p>
+    return (
+        <div class="flex h-screen justify-center items-center flex-col ">
+        <div
+            class="w-full h-screen bg-[url('/img/p.jpg')] bg-cover bg-center">
+            <div class="w-full h-full flex  justify-center items-center backdrop-brightness-50">
+            <div className="container my-24 mx-auto md:px-6">
+  {/* Section: Design Block */}
+  <section className="mb-32 m-12">
+    <div className="block rounded-lg bg-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+      <div className="flex flex-wrap items-center">
+        <div className="block w-full shrink-0 grow-0 basis-auto lg:flex lg:w-6/12 xl:w-4/12">
+          <div className="h-[500px] w-full">
+            <iframe
+              src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
+              frameBorder={0}
+              allowFullScreen=""
+            />
+          </div>
         </div>
-
-        <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
-            <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
-                <div>
-                    <span className="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                        </svg>
-                    </span>
-
-                    <h2 className="mt-4 text-base font-medium text-white">Email</h2>
-                    <p className="mt-2 text-sm text-white">Our friendly team is here to help.</p>
-                    <p className="mt-2 text-sm text-white">hello@merakiui.com</p>
+        <div className="  w-full shrink-0 grow-0 basis-auto lg:w-6/12 xl:w-8/12">
+          <div className="flex flex-wrap px-3 pt-12 pb-12 md:pb-0 lg:pt-0">
+            <div className="mb-12 w-full shrink-0 grow-0 basis-auto px-3 md:w-6/12 md:px-6 lg:w-full xl:w-6/12 xl:px-12">
+              <div className="flex items-start">
+                <div className="shrink-0">
+                  <div className="inline-block rounded-md bg-primary-100 p-4 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-6 w-6"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z"
+                      />
+                    </svg>
+                  </div>
                 </div>
-
-                <div>
-                    <span className="inline-block p-3 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1117 0z" />
-                        </svg>
-                    </span>
-                    
-                    <h2 className="mt-4 text-base font-medium text-white">Office</h2>
-                    <p className="mt-2 text-sm text-white">Come say hello at our office HQ.</p>
-                    <p className="mt-2 text-white">100 Smith Street Collingwood VIC 3066 AU</p>
+                <div className="ml-6 grow">
+                  <p className="mb-2 font-bold text-white">
+                    Technical support
+                  </p>
+                  <p className="text-neutral-500  text-white">
+                    support@example.com
+                  </p>
+                  <p className="text-neutral-500 text-white">
+                    +1 234-567-89
+                  </p>
+                 
                 </div>
-
-                <div>
-                    <span className="inline-block p-3 text-white">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
-                        </svg>
-                    </span>
-                    
-                    <h2 className="mt-4 text-base font-medium text-white">Phone</h2>
-                    <p className="mt-2 text-white">Mon-Fri from 8am to 5pm.</p>
-                    <p className="mt-2 text-white">+1 (555) 000-0000</p>
-                </div>
+               
+                <div> <p className="mb-2 font-bold text-white text-center">
+                    Open Hours
+                  </p>{OpenTimes.map((d)=><OpenHours open={d.open} close={d.close} day={d.day} key={d.id}/>)}</div>
+              
+              </div>
             </div>
-
-            <div className="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto">
-                <iframe width="100%" height="100%" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
-            </div>
+         
+      
+          </div>
         </div>
-        
+      </div>
     </div>
-    
-</section>
-    
-  );
+  </section>
+  {/* Section: Design Block */}
+</div>
+
+            </div>
+        </div>
+    </div>
+    )
 }
 
-export default Contact;
+export default Contact
