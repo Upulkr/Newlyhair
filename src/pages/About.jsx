@@ -2,43 +2,109 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="relative max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
-      <div className="absolute top-0 left-0 w-full h-full bg-cover">
-        <img src="/img/desktop-1680x1050.jpg" className="relative flex flex-wrap items-center" alt="Background" />
-        <div className="max-w-2xl text-center mx-auto relative m-5 md:space-y-8">
-          <div className="space-y-3">
-            <h2 className="text-2xl font-bold md:text-3xl dark:text-white">Our Passion is  Your hair & healthy of your body !</h2>
-            <p className="text-lg text-gray-800 dark:text-gray-200">
-              Your natural hair. We prioritize hair health with conditioning treatments designed to imbue your hair with shine and vitality. Beyond hair services, we offer expert waxing for a smooth, flawless look. Choose Therapy Hair Salon for an unparalleled hair and beauty care experience.
-            </p>
+    <>
+    {/* Container for demo purpose */}
+    <div className="bg-blue-gray-700">
+      {/* Section: Design Block */}
+      <section className="mb-32 text-center lg:text-left">
+        <div className="py-12 md:px-6 md:px-12">
+          <div className="container mx-auto xl:px-32">
+            <div className="flex grid items-center lg:grid-cols-2">
+              <div className="mb-12 md:mt-12 lg:mt-0 lg:mb-0">
+                <div className="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[25px] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:px-12 lg:-mr-14">
+                  <h2 className="mb-2 text-3xl font-bold text-primary dark:text-primary-400">
+                 About Us
+                  </h2>
+                  <p className="mb-4 font-semibold">We Believe in Beautiful Hair, Every Day</p>
+                  <p className="mb-6 text-neutral-500 dark:text-neutral-300">
+                  
+                  </p>
+                  <p className="mb-6 text-neutral-500 dark:text-neutral-300 text-justify">
+                  Keratin Complex® revolutionized the beauty industry in 2007 when a group of industry innovators discovered a new way to care for your hair by merging proven keratin science with cutting-edge technology. They created Natural Keratin Smoothing Treatment, a first-of-its-kind smoothing treatment that pioneered the way to healthy, smooth, frizz-free hair and winner of the Favorite Smoothing Treatment by Behind the Chair Stylist Choice Award for 8 years in a row. Since then, we have continued to push boundaries and remain the leaders in smoothing with a full collection of customizable keratin treatments for every hair type. 
+
+We are proud to be the #1 product line of choice for salon professionals. Over the years we’ve brought the same power of Keratin to a full line of salon-quality hair care products including a comprehensive keratin-enhanced color line. Our unique formulas are engineered with our proprietary Keratin to eliminate frizz, repair damage, strengthen, and soften for undeniably healthy hair.
+                  </p>
+                  {/* <ul className="flex justify-center lg:justify-start">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 96 960 960"
+                        className="w-5 text-primary dark:text-primary-400"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                        />
+                      </svg>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 96 960 960"
+                        className="w-5 text-primary dark:text-primary-400"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                        />
+                      </svg>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 96 960 960"
+                        className="w-5 text-primary dark:text-primary-400"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                        />
+                      </svg>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 96 960 960"
+                        className="w-5 text-primary dark:text-primary-400"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                        />
+                      </svg>
+                    </li>
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 96 960 960"
+                        className="w-5 text-primary dark:text-primary-400"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
+                        />
+                      </svg>
+                    </li>
+                  </ul> */}
+                </div>
+              </div>
+              <div className="md:mb-12 lg:mb-0">
+                <img
+                  src="./img/a.jpg"
+                  className="lg:rotate-[6deg] w-full rounded-lg shadow-lg dark:shadow-black/20"
+                  alt="image"
+                />
+              </div>
+            </div>
           </div>
-
-          <p className="text-lg text-gray-800 dark:text-gray-200">
-            We're proud to be a part of creating a more open culture and to continue building a product that supports this vision.
-          </p>
-
-          <p className="text-lg text-gray-800 dark:text-gray-200">
-            We are passionate about making our guests look and feel great at Therapy Hair Salon! We offer a wide range of services customized to each individual’s needs, and they are always up-to-date on the latest trends. Our talented stylists are dedicated to providing a fantastic experience for every guest. Whether you’re getting your hair cut, colored, or styled, you can rest assured that you’ll leave Therapy Hair Salon looking and feeling your best.
-          </p>
-
-          <h2 className="font-bold md:text-3xl dark:text-white">Our Mission</h2>
-          <p className="text-lg text-gray-800 dark:text-gray-200">
-            To provide the highest quality haircare products and services along with outstanding customer service.
-          </p>
-
-          <blockquote className="text-center p-4 sm:px-7 absolute">
-            <h2 className="font-bold md:text-3xl dark:text-white">Our Vision</h2>
-            <p className="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal dark:text-gray-200">
-              To be a salon that everyone always feels comfortable and welcomed in from the moment they walk in to the moment they leave. We want everyone to have such a great experience, that they can’t wait to tell their friends and family about us. We will continue to grow together and provide the highest quality products and latest trends to our guests.
-            </p>
-          </blockquote>
-
-          <figure>
-            <img className="w-full object-cover rounded-xl" src="./img/girl.jpg" alt="Image Description" />
-          </figure>
         </div>
-      </div>
+      </section>
+      {/* Section: Design Block */}
     </div>
+    {/* Container for demo purpose */}
+  </>
+  
+    
   );
 }
 

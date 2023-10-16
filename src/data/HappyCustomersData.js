@@ -16,7 +16,7 @@ export const Customers=[{
     img: "/img/customers/3.jpg",
     name: "Alexa Neom",
     // position: "Make Up Artist",
-    comment: 'I have been going to Salon Safari for over 6 years and have never walked out disappointed. The staff are friendly and the owner, Dominic takes a a lot of pride in his work. It s no coincidence why this establishment has received the #1 HAIR SALON of the YEAR for peel. HIGHLY RECOMMENDED'
+    comment: 'I have been going to Salon Safari for over 6 years and have never walked out disappointed. The staff are friendly and the owner, Dominic takes a a lot of pride in his work. It s no coincidence why this establishment has received the #1 HAIR SALON of the YEAR for peel.'
   },
   { id:4,
     img: "/img/customers/4.jpg",

@@ -15,12 +15,14 @@ import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import HappyCustomers from "./HappyCustomers";
 import Customerss from "./Customerss";
+import DarkMode from "./DarkMode";
 
 export function Home() {
   
   return (
-    <>
+    <> 
       <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16">
+      
         {/* <div
           className="absolute top-0 h-full w-full bg-cover bg-center"
           style={{ backgroundImage: `url('./imag/hairbackground.jpg')` }}
@@ -110,14 +112,20 @@ export function Home() {
           </div>
     
         </div>
-        <div>   <Typography
+        <div className="container my-24 mx-auto md:px-6 ">
+        <PageTitle heading="Glowing Testimonials: What Our Clients Say">
+  
+  </PageTitle>
+          <HappyCustomers />
+        </div>
+        {/* <div>   <Typography
                 variant="h3"
                 className="mb-3 font-bold text-center"
                 color="blue-gray"
               >
                 Happy Customers
               </Typography>
-        <Customerss /></div>
+        <Customerss /></div> */}
      
        
       </section>

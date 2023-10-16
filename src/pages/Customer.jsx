@@ -9,7 +9,7 @@ function Customer({ comment, name, setActiveCard, img, activeCard, id }) {
         <div
             onClick={() => setActiveCard(id)}
             style={{ width: `${activeCard === id ? 20 : 32}rem` }}
-            className="border-2 border-black m-4 transition ease-in-out delay-150 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
+            className="border-2 border-black m-4  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
         >
            
             <img src={img} alt={name} />
