@@ -1,20 +1,40 @@
 
-// HappyCustomers.js
-import { Customers } from '../data/HappyCustomersData';
-import Newcus from './Newcus';
-import {
 
+import {
+  Card,
+  CardBody,
+  CardHeader,
   Typography,
- 
+  Button,
+  IconButton,
+  Input,
+  Textarea,
 } from "@material-tailwind/react";
-function HappyCustomers() {
+
+function HappyCustomers({img,comment,name}) {
   return (
-    <div className=" md:grid-cols-2 lg:grid-cols-3 m-16 justify-center flex flex-row flex-wrap gap-6 md:gap-x-6 xl:gap-x-12 ">
+    <Card className=" sm:flex-col-1 md:flex-cols-2 lg:flex-cols-3 xl:flex-cols-4 2xl:flex-cols-6  w-100 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..." color="light-green" variant="gradient" >
+    <CardHeader floated={false} className=" rounded object-cover object-center">
       
-      {Customers.map((customer) => (
-        <Newcus key={customer.id} name={customer.name} comment={customer.comment} img={customer.img} />
-      ))}
-    </div>
+    </CardHeader>
+    <CardBody className="text-justify">
+    <img
+              variant="gradient"
+             
+              // color={color}
+              src={img}
+            />
+      <Typography variant="h4" color="blue-gray" className="mb-2 " >
+    {name}
+      </Typography>
+      <Typography color="black" className="font-medium" >
+ {comment}
+      </Typography>
+    </CardBody>
+    {/* <CardFooter className="flex justify-center gap-7 pt-2">
+     
+    </CardFooter> */}
+  </Card>
   );
 }
 

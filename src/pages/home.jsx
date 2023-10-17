@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Card,
   CardBody,
@@ -14,136 +14,83 @@ import { PageTitle, Footer } from "@/widgets/layout";
 import { FeatureCard, TeamCard } from "@/widgets/cards";
 import { featuresData, teamData, contactData } from "@/data";
 import HappyCustomers from "./HappyCustomers";
-import Customerss from "./Customerss";
-import DarkMode from "./Switcher";
+import Customers from "../data/HappyCustomersData";
 
 export function Home() {
-  
   return (
-    <> 
-      <div className="relative flex h-screen content-center items-center justify-center pb-32 pt-16 dark:bg-white">
-   
-        {/* <div
-          className="absolute top-0 h-full w-full bg-cover bg-center"
-          style={{ backgroundImage: `url('./imag/hairbackground.jpg')` }}
-        /> */}
-        <div className="absolute top-0 h-full w-full bg-cover bg-center">
-          <img src="/img/hairbackground.jpg"></img>
-        </div>
-
-        {/* <div className="absolute top-0 h-full w-full bg-[url('https://www.freepik.com/free-photo/woman-washing-head-hairsalon_5912210.htm#query=hair%20spa&position=0&from_view=keyword&track=ais')] bg-cover bg-center" /> */}
-        <div className="absolute top-0 h-full w-full bg-black/40 bg-cover bg-center" />
-        <div className="max-w-8xl container relative mx-auto">
-          <div className="flex flex-wrap items-center">
-            <div className="ml-auto mr-auto w-full px-4 text-center lg:w-8/12">
-              <Typography
-                variant="h1"
-                color="white"
-                className="mb-6 font-black"
-              >
+    <>
+      <div
+        className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center relative"
+        
+        // style={{ backgroundImage: `url(/img/hairbackground.jpg)`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+      >
+          <img
+        src="./img/hairbackground.jpg"
+        alt="Background"
+        className="absolute w-full h-full object-cover"
+        style={{
+          minHeight: "100vh",
+          minWidth: "100%",
+        }}
+/>
+        <div className="max-w-8xl container relative mx-auto mb-12 ">
+          <div className="absolute flex flex-wrap items-center justify-center text-left">
+            <div className=" w-full px-4 ">
+              <Typography variant="h1" color="white" className="mb-6 font-black">
                 Unleash Your Beauty
               </Typography>
-              <Typography variant="lead" color="white" className="opacity-80">
-                Welcome to hair and body Therapy Salon!
+              <Typography variant="lead" color=" " className="border-opacity-80">
+                <h1>Welcome to hair and body Therapy Salon!</h1>
               </Typography>
+              
             </div>
+            <Typography variant="h1" color="white" className="border-opacity-80 m-24 p-16 font-black text-center text-current">
+                <h1>These services are for you</h1>
+                
+              </Typography>
           </div>
+      
         </div>
+      
       </div>
 
-      <section className="-mt-32  px-4 pb-20 pt-4  bg-blue-gray-100">
+      <section className="px-4 pb-20 pt-11 bg-blue-gray-900 ">
         <div className="container mx-auto">
+        
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuresData.map(({ title, img, description }) => (
-              <FeatureCard
-                key={title}
-                title={title}
-                img={img}
-                description={description}
-       
-
-              />
+              <FeatureCard key={title} title={title} img={img} description={description} />
             ))}
           </div>
-          <div className="mt-32 flex flex-wrap items-center">
-            <div className="mx-auto -mt-8 w-full px-4 md:w-5/12">
-              {/* <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white p-3 text-center shadow-lg">
-                <UsersIcon className="h-6 w-6 text-blue-gray-900" />
-              </div> */}
-            
-              {/* <Typography className="mb-8 font-normal text-blue-gray-500">
-                Don't let your uses guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
-                <br />
-                <br />
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
-                go. Just make sure you enable them first via JavaScript.
-              </Typography>
-              <Button variant="outlined">read more</Button> */}
-            </div>
-            {/* <div className="mx-auto mt-24 flex w-full justify-center px-4 md:w-4/12 lg:mt-0">
-              <Card className="shadow-lg shadow-gray-500/10">
-                <CardHeader className="relative h-56">
-                  <img
-                    alt="Card Image"
-                    src="/img/teamwork.jpeg"
-                    className="h-full w-full"
-                  />
-                </CardHeader>
-                <CardBody>
-                  <Typography
-                    variant="h5"
-                    color="blue-gray"
-                    className="mb-3 font-bold"
-                  >
-                    Top Notch Services
-                  </Typography>
-                  <Typography className="font-normal text-blue-gray-500">
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
-                  </Typography>
-                </CardBody>
-              </Card>
-            </div> */}
-      
-          </div>
-    
         </div>
-        <div className="container my-24 mx-auto md:px-6 ">
-        <PageTitle heading="Glowing Testimonials: What Our Clients Say">
-  
-  </PageTitle>
-          <HappyCustomers />
-        </div>
-        {/* <div>   <Typography
-                variant="h3"
-                className="mb-3 font-bold text-center"
-                color="blue-gray"
-              >
-                Happy Customers
-              </Typography>
-        <Customerss /></div> */}
-     
-       
       </section>
-      <section className="px-4 pb-48 pt-20  bg-blue-gray-200">
-        
+      <section className="px-4 pb-20 pt-4 bg-blue-gray-900">
         <div className="container mx-auto">
-          <PageTitle heading="Here are our Team">
-  
-          </PageTitle>
-          <div className="flex items-center justify-center p-10">
-            {teamData.map(({ img, name, position, socials,id, }) => (
+        <Typography variant="h1" color="white" className="border-opacity-80 m-24 font-black text-justify text-white">
+                <h1>Happy Customers</h1>
+                
+              </Typography>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
+          {Customers.map(({ id,name, img, comment }) => (
+              <HappyCustomers key={id} name={name} comment={comment} img={img}  />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 pb-20 pt-4 bg-blue-gray-900">
+        <div className="container mx-auto">
+        <Typography variant="h1" color="white" className="border-opacity-80 m-24 font-black text-justify text-white">
+                <h1>Our Team</h1>
+                
+              </Typography>
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
+            {teamData.map(({ img, name, position, socials, id }) => (
               <TeamCard
-                key={name}
+                key={id}
                 img={img}
                 name={name}
                 position={position}
-             
-                id={id}
                 socials={
                   <div className="flex items-center gap-2">
                     {socials.map(({ color, name }) => (
@@ -158,53 +105,10 @@ export function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="relative bg-blue-gray-50/50 px-4 py-24">
-        <div className="container mx-auto">
-          <PageTitle heading="Our Goals">
-    
-          </PageTitle>
-          <div className="mx-auto mb-48 mt-20 grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3">
-            {contactData.map(({ title, icon, description }) => (
-              <Card
-                key={title}
-                color="transparent"
-                shadow={false}
-                className="text-center text-blue-gray-900"
-              >
-                <div className="mx-auto mb-6 grid h-14 w-14 place-items-center rounded-full bg-white shadow-lg shadow-gray-500/20">
-                  {React.createElement(icon, {
-                    className: "w-5 h-5",
-                  })}
-                </div>
-                <Typography variant="h5" color="blue-gray" className="mb-2">
-                  {title}
-                </Typography>
-                <Typography className="font-normal text-blue-gray-500">
-                  {description}
-                </Typography>
-              </Card>
-            ))}
-          </div>
-          <PageTitle heading="Want to work with us?">
-            Complete this form and we will get back to you in 24 hours.
-          </PageTitle>
-          <form className="mx-auto mt-12 max-w-3xl text-center">
-            <div className="mb-8 flex gap-8">
-              <Input variant="standard" size="lg" label="Full Name" />
-              <Input variant="standard" size="lg" label="Email Address" />
-            </div>
-            <Textarea variant="standard" size="lg" label="Message" rows={8} />
-            <Button variant="gradient" size="lg" className="mt-8">
-              Send Message
-            </Button>
-          </form>
-        </div>
-      </section> */}
-      <div className="bg-blue-gray-50/50">
+
+      <div className="bg-blue-gray-900">
         <Footer />
-   
       </div>
-      {/* <Customerss/> */}
     </>
   );
 }

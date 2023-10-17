@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Navbar } from "@/widgets/layout";
 import routes from "@/routes";
-import Switcher from "./pages/Switcher";
+
 
 function App() {
   return (

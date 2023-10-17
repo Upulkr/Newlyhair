@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Card, Avatar, Typography, } from "@material-tailwind/react";
+import { Card, Avatar, Typography,CardHeader, CardBody ,CardFooter} from "@material-tailwind/react";
 import { useState } from "react";
 
 export function TeamCard({ img, name, position, socials, id }) {
@@ -11,25 +11,28 @@ function handleClick(){
 //  ()=> setActiveCard(activeCard)
 }
   return(
-    <Card style={{ width: `${activeCard === id ? 20 : 32}rem` }} onClick={handleClick} color="transparent" shadow={false} className={`text-center border-2 border-black m-4 `}>
-  
-      <Avatar
-        src={img}
-        alt={name}
-        size="xxl"
-        className="h-full w-full shadow-lg shadow-gray-500/25"
-      />
-      <Typography variant="h5" color="blue-gray" className="mt-6 mb-1">
-        {name}
+    <Card className=" sm:flex-col-1 md:flex-cols-2 lg:flex-cols-3 xl:flex-cols-4 2xl:flex-cols-6  w-100 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..." color="yellow" variant="gradient" >
+    <CardHeader floated={false} className=" rounded object-cover object-center">
+      
+    </CardHeader>
+    <CardBody className="text-center text-justify">
+    <img
+              variant="gradient"
+             
+              // color={color}
+              src={img}
+            />
+      <Typography variant="h4" color="blue-gray" className="mb-2 " >
+    {name}
       </Typography>
-      {position && (
-        <Typography variant="h5" color="black" className="mt-6 mb-1">
-          {position}
-        </Typography>
-      )}
-      {socials && <div className="mx-auto mt-5">{socials}</div>}
-      <div className={`h-${activeCard === id ? 40 : 32} `} />
-    </Card>
+      <Typography color="black" className="font-medium" >
+ {position}
+      </Typography>
+    </CardBody>
+    <CardFooter className="flex justify-center gap-7 pt-2">
+     
+    </CardFooter>
+  </Card>
   );
 }
 

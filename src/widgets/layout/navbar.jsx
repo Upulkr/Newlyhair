@@ -9,7 +9,7 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Switcher from '../../pages/Switcher';
+
 
 export function Navbar({ routes }) {
   const [openNav, setOpenNav] = React.useState(false);
