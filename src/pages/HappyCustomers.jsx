@@ -4,16 +4,12 @@ import {
   Card,
   CardBody,
   CardHeader,
-  Typography,
-  Button,
-  IconButton,
-  Input,
-  Textarea,
+  Typography
 } from "@material-tailwind/react";
 
 function HappyCustomers({img,comment,name}) {
   return (
-    <Card className=" sm:flex-col-1 md:flex-cols-2 lg:flex-cols-3 xl:flex-cols-4 2xl:flex-cols-6  w-100 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..." color="light-green" variant="gradient" >
+    <Card className=" sm:flex-col-1 md:flex-cols-2 lg:flex-cols-3 xl:flex-cols-4 2xl:flex-cols-6  w-100 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..." color="white" variant="gradient" >
     <CardHeader floated={false} className=" rounded object-cover object-center">
       
     </CardHeader>

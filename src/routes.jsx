@@ -4,6 +4,7 @@ import {
   UserCircleIcon,
   ArrowRightOnRectangleIcon,
   UserPlusIcon,
+  DocumentTextIcon
  
 } from "@heroicons/react/24/solid";
 
@@ -11,6 +12,7 @@ import About from "./pages/About";
 import Contact from './pages/Contact'
 import Home from './pages/home'
 import Services from './pages/Services'
+import Booking from './pages/Booking'
 export const routes = [
   {
     icon: HomeIcon,
@@ -36,13 +38,12 @@ export const routes = [
     path: "/contact",
     element: <Contact />,
   },
-  // {
-  //   icon: DocumentTextIcon,
-  //   name: "Book Online",
-  //   href: "",
-  //   target: "_blank",
-  //   element: "",
-  // },
+  {
+    icon: DocumentTextIcon,
+    name: "Book An Appointment",
+    path: "/booking",
+    element: <Booking/>,
+  },
 ];
 
 export default routes;

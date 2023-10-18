@@ -22,14 +22,14 @@ export function Navbar({ routes }) {
   }, []);
 
   const navList = (
-    <ul className="mb-7 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 ...">
+    <ul className="mb-7 mt-2 flex flex-col gap-2 text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       {routes.map(({ name,icon,path,  }) => (
         <Typography
           key={name}
           as="li"
-          variant="small"
-          color="inherit"
-          className="capitalize transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover: duration-300 ..."
+          variant="3xl"
+          color="8xl"
+          className="capitalize transition ease-in-out delay-150  text-black font-extrabold"
           
         >
 {/* 
@@ -69,8 +69,8 @@ export function Navbar({ routes }) {
   );
 
   return (
-    <MTNavbar color="transparent" className="p-3 mb-11" >     
-      <div className="  container mx-auto flex items-center justify-between text-white">
+    <MTNavbar color="white" className="h-12 p-2" >     
+      <div className="  container mx-auto flex  justify-between text-black">
         <Link to="/">
           <Typography className="ml-2 mr-4 cursor-pointer py-1.5 font-bold">
             Saloon Noya

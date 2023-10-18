@@ -1,9 +1,3 @@
-import React from 'react';
-import {
- 
-    Typography,
-    
-  } from "@material-tailwind/react";
 function Customer({ comment, name, setActiveCard, img, activeCard, id }) {
     return (
         <div

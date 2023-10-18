@@ -4,7 +4,7 @@ function About() {
   return (
     <>
     {/* Container for demo purpose */}
-    <div className="bg-blue-gray-700">
+    <div className="bg-white">
       {/* Section: Design Block */}
       <section className="mb-32 text-center lg:text-left">
         <div className="py-12 md:px-6 md:px-12">

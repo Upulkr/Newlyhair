@@ -5,10 +5,11 @@ import routes from "@/routes";
 
 function App() {
   return (
-    <>
+    <> 
       <div className="fixed top-0  container left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
     <Navbar routes={routes} />
     
+
       </div>
   
       <Routes>
@@ -18,6 +19,7 @@ function App() {
         )}
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
+
     </>
   );
 }

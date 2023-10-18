@@ -22,10 +22,10 @@ function handleClick(){
               // color={color}
               src={img}
             />
-      <Typography variant="h4" color="blue-gray" className="mb-2 " >
+      <Typography variant="h4" color="blue-gray" className="mb-2  text-center" >
     {name}
       </Typography>
-      <Typography color="black" className="font-medium" >
+      <Typography color="black" className="font-medium text-center" >
  {position}
       </Typography>
     </CardBody>
