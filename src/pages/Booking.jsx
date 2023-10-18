@@ -1,10 +1,14 @@
+import React from 'react';
+
 function Booking() {
     return (
-        <div className="flex items-center justify-center  m-12 p-12">
-            {/* Author: FormBold Team */}
-            <div className="mx-auto w-full max-w-[550px] bg-white">
-                <form>
-                    <div className="mb-5">
+        <div className='flex justify-center items-center h-screen' >
+            <div className='grid grid-cols-3 gap-6 w-full max-w-screen-lg  m-20 p-10 '>
+                <div className=''><img src='/img/tool.jpg' className='col-span-1 flex justify-center  '>
+            </img></div>
+            <div className="min-w-max max-w-[550px] bg-white  items-center ">
+                <form className='items-center  '>
+                    <div className="">
                         <label
                             htmlFor="name"
                             className="mb-3 block text-base font-medium text-[#07074D]"
@@ -83,67 +87,17 @@ function Booking() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="mb-5 pt-3">
-                        <label className="mb-5 block text-base font-semibold text-[#07074D] sm:text-xl">
-                            Address Details
-                        </label>
-                        <div className="-mx-3 flex flex-wrap">
-                            <div className="w-full px-3 sm:w-1/2">
-                                <div className="mb-5">
-                                    <input
-                                        type="text"
-                                        name="area"
-                                        id="area"
-                                        placeholder="Enter area"
-                                        className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    />
-                                </div>
-                            </div>
-                            <div className="w-full px-3 sm:w-1/2">
-                                <div className="mb-5">
-                                    <input
-                                        type="text"
-                                        name="city"
-                                        id="city"
-                                        placeholder="Enter city"
-                                        className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    />
-                                </div>
-                            </div>
-                            <div className="w-full px-3 sm:w-1/2">
-                                <div className="mb-5">
-                                    <input
-                                        type="text"
-                                        name="state"
-                                        id="state"
-                                        placeholder="Enter state"
-                                        className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    />
-                                </div>
-                            </div>
-                            <div className="w-full px-3 sm:w-1/2">
-                                <div className="mb-5">
-                                    <input
-                                        type="text"
-                                        name="post-code"
-                                        id="post-code"
-                                        placeholder="Post Code"
-                                        className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div> */}
                     <div>
                         <button className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none">
                             Book Appointment
                         </button>
                     </div>
                 </form>
-            </div>
+            </div></div>
+            
         </div>
 
-    )
+    );
 }
 
-export default Booking
+export default Booking;

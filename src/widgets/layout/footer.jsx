@@ -69,10 +69,13 @@ export function Footer({ title, description, socials, menus, copyright }) {
               variant="small"
               className="font-normal text-white"
             >
+             
               {copyright}
             </Typography>
           </div>
+         
         </div>
+        
       </div>
     </footer>
   );

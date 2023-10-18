@@ -1,86 +1,55 @@
-import OpenTimes from "@/data/OpenTimes";
-import OpenHours from "./OpenHours";
+
 
 function Contact() {
+ 
+ 
   return (
-    <div className="flex justify-center items-center ">
-      <div className="w-full bg-[url('/img/p.jpg')] bg-cover bg-center h-2/4  ">
-        <div className="w-full h-full flex justify-center items-center backdrop-brightness-50">
-          <div className="container my-24 mx-auto md:px-6">
-            {/* Section: Design Block */}
-            <div></div>
-            <section className="m-4 grid grid-cols-2 gap-4 mt-12 place-items-center ">
-              <div className="block rounded-lg bg-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                <div className="flex flex-wrap items-center">
-                  <div className="w-full lg:w-6/12 xl:w-4/12">
-                    <div className="h-96 lg:h-[500px] w-full">
-                      <iframe
-                        src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        className="w-full h-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-                        frameBorder={0}
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full lg:w-6/12 xl:w-8/12  ">
-                    <div className="flex flex-wrap pt-12 pb-12 md:pb-0 lg:pt-0">
-                      <div className="w-full md:w-6/12 xl:w-6/12">
-                        <div className="flex items-start">
-                          <div className="mr-4">
-                            <div className="inline-block rounded-md bg-primary-100 p-4 text-primary m-1">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth={2}
-                                stroke="currentColor"
-                                className="h-6 w-6 "
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  d="M14.25 9.75v-4.5m0 4.5h4.5m-4.5 0l6-6m-3 18c-8.284 0-15-6.716-15-15V4.5A2.25 2.25 0 014.5 2.25h1.372c.516 0 .966.351 1.091.852l1.106 4.423c.11.44-.054.902-.417 1.173l-1.293.97a1.062 1.062 0 00-.38 1.21 12.035 12.035 0 007.143 7.143c.441.162.928-.004 1.21-.38l.97-1.293a1.125 1.125 0 011.173-.417l4.423 1.106c.5.125.852.575.852 1.091V19.5a2.25 2.25 0 01-2.25 2.25h-2.25z"
-                                />
-                              </svg>
-                            </div>
-                          </div>
-                          <div className="flex-grow">
-                            <p className="mb-2 font-bold text-black">
-                              Technical support
-                            </p>
-                            <p className="text-neutral-500 text-black">
-                              support@example.com
-                            </p>
-                            <p className="text-neutral-500 text-black">
-                              +1 234-567-89
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="w-full md:w-6/12 xl:w-6/12 ">
-                        <p className="mb-2 font-bold text-white text-center">
-                          Open Hours
-                        </p>
-                        {OpenTimes.map((d) => (
-                          <OpenHours
-                            open={d.open}
-                            close={d.close}
-                            day={d.day}
-                            key={d.id}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* Section: Design Block */}
+    <div className='grid grid-cols-1 gap-2'>
+    <div className="relative"> <img src='./img/p.jpg' className="h-100"></img> </div>
+   
+      <section className="  text-gray-600 body-font relative">
+    <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+      <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <iframe width="100%" height="100%" className="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58164782.846126474!2d-142.1396116791268!3d27.153250409320055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88891964c04d0f17%3A0x9954d851d387227e!2sSalon%20U!5e0!3m2!1sen!2slk!4v1697637303562!5m2!1sen!2slk" vnb-frameid="2993" style={{
+         
+      }}></iframe>
+        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <div className="lg:w-1/2 px-6">
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+            <p className="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+          </div>
+          <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+            <a className="text-indigo-500 leading-relaxed">example@email.com</a>
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+            <p className="leading-relaxed">123-456-7890</p>
           </div>
         </div>
       </div>
+      <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+        <p className="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+        <div className="relative mb-4">
+          <label for="name" className="leading-7 text-sm text-gray-600">Name</label>
+          <input type="text" id="name" name="name" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+        </div>
+        <div className="relative mb-4">
+          <label for="email" className="leading-7 text-sm text-gray-600">Email</label>
+          <input type="email" id="email" name="email" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"/>
+        </div>
+        <div className="relative mb-4">
+          <label for="message" className="leading-7 text-sm text-gray-600">Message</label>
+          <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+        </div>
+        <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+        <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+      </div>
     </div>
-  );
+  </section>  
+   
+    </div>
+
+  )
 }
 
-export default Contact;
+export default Contact

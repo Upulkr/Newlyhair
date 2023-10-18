@@ -1,4 +1,5 @@
 function OpenHours({ open, close, day }) {
+
   return (
     <div className="table-responsive m-4 justify-center">
       <table className="w-full">

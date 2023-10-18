@@ -5,8 +5,9 @@ import { IconButton, Typography } from "@material-tailwind/react";
 import Customers from "../data/HappyCustomersData";
 import Example from './NewServices';
 import Testomonials from "./Testomonials";
-
-export function Home() {
+import OpenTimes from '../data/OpenTimes'
+import OpenHours from "./OpenHours"
+export function Home() {const{id,open,close,day}=OpenTimes
   return (
     <>
 
@@ -92,6 +93,11 @@ export function Home() {
 
       <div className="bg-blue-gray-900">
         <Footer />
+        <div>  <OpenHours  key={id}
+            id={id}
+             open={open}
+             close= {close}
+             day={day}/></div>
       </div>
     </>
   );
