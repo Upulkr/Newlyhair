@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '@dotlottie/player-component';
 function Booking() {
     return (
         <div className='flex justify-center items-center h-screen' >
@@ -93,7 +93,16 @@ function Booking() {
                         </button>
                     </div>
                 </form>
-            </div></div>
+            </div>
+            <dotlottie-player
+  src="https://lottie.host/6d6e2f78-2c98-4704-b592-f471398e15d6/zQF4EpZErT.json"
+  background="transparent"
+  speed={1}
+  style={{ width: 300, height: 300 }}
+  loop=""
+  autoPlay=""
+/>
+</div>
             
         </div>
 

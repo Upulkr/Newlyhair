@@ -4,11 +4,11 @@ function Contact() {
  
  
   return (
-    <div className='grid grid-cols-1 gap-2'>
-    <div className="relative"> <img src='./img/p.jpg' className="h-100"></img> </div>
+    <div className='grid grid-cols-1 '>
+    <div className="relative"> <img src='./img/p.jpg' className="w-full h-80 object-cover"></img> </div>
    
-      <section className="  text-gray-600 body-font relative">
-    <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+      <section className="  body-font relative">
+    <div className="container px- py-24 mx-auto flex sm:flex-nowrap flex-wrap ">
       <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
         <iframe width="100%" height="100%" className="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58164782.846126474!2d-142.1396116791268!3d27.153250409320055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88891964c04d0f17%3A0x9954d851d387227e!2sSalon%20U!5e0!3m2!1sen!2slk!4v1697637303562!5m2!1sen!2slk" vnb-frameid="2993" style={{
          

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@coreui/react": "^5.0.0-alpha.3",
+    "@dotlottie/player-component": "^2.7.0",
     "@heroicons/react": "^2.0.12",
     "@material-tailwind/react": "^1.2.4",
     "@trendyol-js/react-carousel": "^3.0.2",
