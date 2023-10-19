@@ -19,7 +19,7 @@ export function Home() {const{id,open,close,day}=OpenTimes
         <img
           src="./img/hairbackground.jpg"
           alt="Background"
-          className="absolute w-full h-full object-cover"
+          className="absolute min-w-fit h-screen object-center"
           style={{
             minHeight: "100vh",
             minWidth: "100%",
