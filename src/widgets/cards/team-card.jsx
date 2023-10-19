@@ -15,7 +15,7 @@ export function TeamCard({ img, name, position, socials, id }) {
     <CardHeader floated={false} className=" rounded object-cover object-center">
       
     </CardHeader>
-    <CardBody className="text-center text-justify">
+    <CardBody className="text-center ">
     <img
               variant="gradient"
              
