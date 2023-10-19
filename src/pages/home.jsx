@@ -7,6 +7,8 @@ import Example from './NewServices';
 import Testomonials from "./Testomonials";
 import OpenTimes from '../data/OpenTimes'
 import OpenHours from "./OpenHours"
+import '@dotlottie/player-component';
+import ChatBox from "./ChatBox";
 export function Home() {const{id,open,close,day}=OpenTimes
   return (
     <>
@@ -38,6 +40,44 @@ export function Home() {const{id,open,close,day}=OpenTimes
       </div>
 
       <section className="px-4 pb-20 pt-11 bg-white">
+        <div className="flex  flex-cols-3 justify-center"><dotlottie-player  className=' '
+  src="https://lottie.host/7b5e7591-d020-4d3f-9f2e-02d1a90ec50e/vqKjE34K77.json"
+  background="transparent"
+  speed={1}
+  style={{ width: 700, height: 600 }}
+  loop=""
+  autoPlay=""
+ 
+/>
+<dotlottie-player
+  src="https://lottie.host/af0f01d1-9d51-4508-904e-10a045231184/CVhqp8c1NN.json"
+  background="transparent"
+  speed={1}
+  style={{ width: 700, height: 600 }}
+  direction={1}
+  loop=""
+  autoPlay=""
+ 
+/>
+
+
+<dotlottie-player
+  src="https://lottie.host/7bb3c7f4-a5a2-4cc5-98e4-8026dc539a24/FHFvILMGVF.json"
+  background="transparent"
+  speed={1}
+  style={{ width: 700, height: 600 }}
+  direction={1}
+  loop=""
+  autoPlay=""
+ 
+/>
+
+
+
+</div>
+      
+
+
         {/* {featuresData.map(({ title, img, description }) => (
               <Example key={title} title={title} img={img} description={description} />
             ))} */}
@@ -93,12 +133,13 @@ export function Home() {const{id,open,close,day}=OpenTimes
 
       <div className="bg-blue-gray-900">
         <Footer />
-        <div>  <OpenHours  key={id}
+        {/* <div>  <OpenHours  key={id}
             id={id}
              open={open}
              close= {close}
-             day={day}/></div>
+             day={day}/></div> */}
       </div>
+      <div><ChatBox/></div>
     </>
   );
 }

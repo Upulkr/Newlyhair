@@ -19,7 +19,7 @@ export default function Example({img}) {
                 {/* Decorative image grid */}
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl"
+                  className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl "
                 >
                   <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
                     <div className="flex items-center space-x-6 lg:space-x-8">
@@ -28,7 +28,7 @@ export default function Example({img}) {
                           <img
                             src='/img/services hair/cutting.png'
                             alt=""
-                            className="h-full w-full object-cover object-center"
+                            className="h-full w-full object-cover object-center hover:bg-sky-700  "
                           />
                         </div>
                         <div className="h-64 w-44 overflow-hidden rounded-lg">
