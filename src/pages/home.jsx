@@ -9,6 +9,7 @@ import OpenTimes from '../data/OpenTimes'
 import OpenHours from "./OpenHours"
 import '@dotlottie/player-component';
 import ChatBox from "./ChatBox";
+import Video from "./Video";
 export function Home() {const{id,open,close,day}=OpenTimes
   return (
     <>
@@ -37,8 +38,9 @@ export function Home() {const{id,open,close,day}=OpenTimes
 
           </div>
         </div>
+      
       </div>
-
+      <Video/>
       <section className="px-4 pb-20 pt-11 bg-white">
         <div className="flex  flex-cols-3 justify-center"><dotlottie-player  className=' '
   src="https://lottie.host/7b5e7591-d020-4d3f-9f2e-02d1a90ec50e/vqKjE34K77.json"

@@ -1,18 +1,21 @@
 import PropTypes from "prop-types";
 import { Typography, IconButton } from "@material-tailwind/react";
+import OpenHours from "@/pages/OpenHours";
+import OpenTimes from "@/data/OpenTimes";
 
 const year = new Date().getFullYear();
 
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
-    <footer className="relative px-4 pt-8 pb-6">
-      <div className="container mx-auto">
+    <>
+    <footer className=" flex  relative px-4 pt-8 pb-6">
+      <div className=" flex col-2 container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12">
-            <Typography variant="h4" className="mb-4" color="white">
+            <Typography variant="h2" className=" m-3 mx-auto grid w-max text-center " color="white">
               {title}
             </Typography>
-            <Typography className="font-normal text-white">
+            <Typography className="  text-center font-normal text-white">
               {description}
             </Typography>
             <div className="mx-auto mt-6 mb-8 flex justify-center gap-2 md:mb-0 lg:justify-start">
@@ -32,8 +35,32 @@ export function Footer({ title, description, socials, menus, copyright }) {
               ))}
             </div>
           </div>
-          <div className="mx-auto mt-12 grid w-max grid-cols-2 gap-24 lg:mt-0">
-            {menus.map(({ name, items }) => (
+          </div>
+          <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <iframe width="100%" height="100%" className="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58164782.846126474!2d-142.1396116791268!3d27.153250409320055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88891964c04d0f17%3A0x9954d851d387227e!2sSalon%20U!5e0!3m2!1sen!2slk!4v1697637303562!5m2!1sen!2slk" vnb-frameid="2993" style={{
+         
+      }}></iframe>
+        <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <div className="lg:w-1/2 px-6">
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+            <p className="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
+          </div>
+          <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+            <a className="text-indigo-500 leading-relaxed">example@email.com</a>
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+            <p className="leading-relaxed">123-456-7890</p>
+          </div>
+        </div>
+      </div>
+          <div className="mx-auto grid w-max m-5  lg:mt-0">
+          <Typography variant="h3" className=" font-normal text-white text-center">
+          SALON HOURS
+            </Typography>
+           {OpenTimes.map(({open,close,day,id})=>     <OpenHours open={open} close={close} day={day} key={id}/>)}
+      
+           
+            {/* {menus.map(({ name, items }) => (
               <div key={name}>
                 <Typography
                   variant="small"
@@ -59,30 +86,32 @@ export function Footer({ title, description, socials, menus, copyright }) {
                   ))}
                 </ul>
               </div>
-            ))}
+            ))} */}
           </div>
-        </div>
-        <hr className="my-6 border-gray-300" />
-        <div className="flex flex-wrap items-center justify-center md:justify-between">
-          <div className="mx-auto w-full px-4 text-center">
-            <Typography
-              variant="small"
-              className="font-normal text-white"
-            >
-             
-              {copyright}
-            </Typography>
-          </div>
-         
         </div>
         
-      </div>
+      
+        
+    
     </footer>
+      <div className="flex flex-wrap items-center justify-center md:justify-between">
+      <div className="mx-auto w-full px-4 text-center">
+        <Typography
+          variant="small"
+          className="font-normal text-white"
+        >
+         
+          {copyright}
+        </Typography>
+      </div>
+     
+    </div>
+    </>
   );
 }
 
 Footer.defaultProps = {
-  title: "Saloon Noya",
+  title: "Salon Noya",
   description:
     "Your hair & body is a reflection of your personality",
   socials: [
@@ -170,13 +199,13 @@ Footer.defaultProps = {
   ),
 };
 
-Footer.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  socials: PropTypes.arrayOf(PropTypes.object),
-  menus: PropTypes.arrayOf(PropTypes.object),
-  copyright: PropTypes.node,
-};
+// Footer.propTypes = {
+//   title: PropTypes.string,
+//   description: PropTypes.string,
+//   socials: PropTypes.arrayOf(PropTypes.object),
+//   menus: PropTypes.arrayOf(PropTypes.object),
+//   copyright: PropTypes.node,
+// };
 
 Footer.displayName = "/src/widgets/layout/footer.jsx";
 
