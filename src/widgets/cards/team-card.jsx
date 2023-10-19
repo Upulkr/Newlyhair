@@ -1,5 +1,5 @@
+import { Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
 import PropTypes from "prop-types";
-import { Card, Avatar, Typography,CardHeader, CardBody ,CardFooter} from "@material-tailwind/react";
 import { useState } from "react";
 
 export function TeamCard({ img, name, position, socials, id }) {

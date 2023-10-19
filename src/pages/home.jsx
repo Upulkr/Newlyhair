@@ -1,16 +1,14 @@
 import { teamData } from "@/data";
 import { TeamCard } from "@/widgets/cards";
 import { Footer } from "@/widgets/layout";
+import '@dotlottie/player-component';
 import { IconButton, Typography } from "@material-tailwind/react";
 import Customers from "../data/HappyCustomersData";
+import ChatBox from "./ChatBox";
 import Example from './NewServices';
 import Testomonials from "./Testomonials";
-import OpenTimes from '../data/OpenTimes'
-import OpenHours from "./OpenHours"
-import '@dotlottie/player-component';
-import ChatBox from "./ChatBox";
 import Video from "./Video";
-export function Home() {const{id,open,close,day}=OpenTimes
+export function Home() {
   return (
     <>
 

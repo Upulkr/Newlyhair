@@ -1,6 +1,5 @@
-import React from 'react';
-import { VideoTag } from 'react-video-tag';
 import PropTypes from "prop-types";
+import { VideoTag } from 'react-video-tag';
 
 const Video = () => {
   return (
