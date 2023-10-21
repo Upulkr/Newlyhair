@@ -14,15 +14,15 @@ import Customers from "@/data/HappyCustomersData";
 export function Home() {
   return (
     <>
-      <div className="mt- relative flex min-h-screen flex-col items-center justify-center bg-cover bg-center">
+      <div className="mt- relative flex min-h-screen flex-col items-center justify-center bg-center">
         <img
           src="./img/hairbackground.jpg"
           alt="Background"
-          className="absolute h-screen min-w-fit object-center"
-          style={{
-            minHeight: "100vh",
-            minWidth: "100%",
-          }}
+          className="absolute h-screen  object-center bg-transparent bg-repeat sm:object-cover  min-w-full"
+          // style={{
+          //   minHeight: "100%",
+          //   minWidth: "100%",
+          // }}
         />
         <div className="max-w-8xl container relative mx-auto mb-12">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center">

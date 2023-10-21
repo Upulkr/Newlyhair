@@ -8,7 +8,7 @@ function ChatBox() {
    }
 
     return (
-        <div>
+        <div className="grid grid-cols-1">
         {/* component */}
         <button
         onClick={()=>setOpen(!open)}
@@ -38,7 +38,7 @@ function ChatBox() {
         </button>
         {open? <div
           style={{ boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)" }}
-          className="fixed bottom-[calc(4rem+1.5rem)] right-0 mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-[440px] h-[620px]"
+          className="fixed bottom-[calc(4rem+1.5rem)] right-0 sm:mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-full sm:w-[440px] h-[620px]"
         >
           {/* Heading */}
           <div className="flex flex-col space-y-1.5 pb-6">
@@ -53,7 +53,7 @@ function ChatBox() {
             style={{ minWidth: "100%", display: "table" }}
           >
             {/* Chat Message AI */}
-            <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1">
+            <div className="flex gap-3 my-4 text-gray-600 text-sm flex-1 grid sm:grid-cols-1">
               <span className="relative flex shrink-0 overflow-hidden rounded-full w-8 h-8">
                 <div className="rounded-full bg-gray-100 border p-1">
                   <svg
