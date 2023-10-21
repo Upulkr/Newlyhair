@@ -52,7 +52,7 @@ export function Home() {
             color="black"
             className="mb-8 text-center font-black"
           >
-            WHAT CLIENTS SAY
+          Our happy clients say about us
           </Typography>
         </div>
         <Testomonials />
