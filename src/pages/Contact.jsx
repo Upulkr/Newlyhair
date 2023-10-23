@@ -1,17 +1,43 @@
 import emailJs from '@emailjs/browser';
+import { useState } from 'react';
 
 function Contact() {
 
   const serviceId = process.env.CONTACT_SERVICE_ID;
-const templateId = process.env.CONTACT_TEMPLATE_ID;
-const publicKey = process.env.CONTACT_PUBLIC_KEY;
+  const templateId = process.env.CONTACT_TEMPLATE_ID;
+  const publicKey = process.env.CONTACT_PUBLIC_KEY;
 
-  const sendEmail=(e)=>{
+
+
+
+  const [formValues, setFormValues] = useState({
+    email: '',
+    name: '',
+    message: '',
+
+  })
+  const [records, setRecords] = useState([]
+  )
+
+console.log(records)
+
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    // alert('Submitted')
-// emailJs.sendForm('service_g1xvxic','template_2qqvyjj',e.target,'1oNKaXQwiTyrAENQ9',)
-emailJs.sendForm(serviceId,templateId,e.target,publicKey,)
 
+    // emailJs.sendForm('service_g1xvxic','template_2qqvyjj',e.target,'1oNKaXQwiTyrAENQ9',)
+    emailJs.sendForm(serviceId, templateId, e.target, publicKey,)
+    alert('submitted')
+
+
+    setRecords([...records, formValues])
+    setFormValues(
+      {
+        email: '',
+        name: '',
+        message: '',
+      }
+    )
   }
   return (
     <div className="grid grid-cols-1 ">
@@ -62,50 +88,56 @@ emailJs.sendForm(serviceId,templateId,e.target,publicKey,)
           </div>
           <div className=" flex w-full flex-col rounded-xl bg-white p-5 md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
             <h2 className="title-font text-gray-900-c mb-1 text-center text-lg font-medium">
-         Contact Us
+              Contact Us
             </h2>
             <p className="mb-5 text-center  leading-relaxed text-gray-600 ">
               Leave your feedback or contact Us
             </p>
             <form onSubmit={sendEmail}>
-            <div className="relative mb-4 text-center ">
-              <label for="name" className="text-sm leading-7 text-gray-600">
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-              />
-            </div>
-            <div className="relative mb-4 text-center">
-              <label for="email" className="text-sm leading-7 text-gray-600">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email_from"
-                className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-              />
-            </div>
-            <div className="relative mb-4 text-center">
-              <label for="message" className="text-sm leading-7 text-gray-600">
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
-              ></textarea>
-            </div>
-            <div className="flex justify-center"> 
-            <button type='submit' className=" rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none text-center">
-            Submit
-            </button></div>
-           
-            {/* <p className="mt-3 text-xs text-gray-500">
+              <div className="relative mb-4 text-center ">
+                <label for="name" className="text-sm leading-7 text-gray-600">
+                  Name
+                </label>
+                <input
+                  onChange={(e) => setFormValues({ ...formValues, name: e.target.value })}
+                  value={formValues.name}
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                />
+              </div>
+              <div className="relative mb-4 text-center">
+                <label for="email" className="text-sm leading-7 text-gray-600">
+                  Email
+                </label>
+                <input
+                  onChange={(e) => setFormValues({ ...formValues, email: e.target.value })}
+                  value={formValues.email}
+                  type="email"
+                  id="email"
+                  name="email_from"
+                  className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                />
+              </div>
+              <div className="relative mb-4 text-center">
+                <label for="message" className="text-sm leading-7 text-gray-600">
+                  Message
+                </label>
+                <textarea
+                  onChange={(e) => setFormValues({ ...formValues, message: e.target.value })}
+                  value={formValues.message}
+                  id="message"
+                  name="message"
+                  className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+                ></textarea>
+              </div>
+              <div className="flex justify-center">
+                <button type='submit' className=" rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none text-center">
+                  Submit
+                </button></div>
+
+              {/* <p className="mt-3 text-xs text-gray-500">
               Chicharrones blog helvetica normcore iceland tousled brook viral
               artisan.
             </p> */}
