@@ -73,7 +73,7 @@ export function Navbar({ routes }) {
       <div className="  container mx-auto flex  justify-between text-black">
         <Link to="/">
           <Typography className="ml-2 mr-4 cursor-pointer py-1.5 font-bold">
-            Saloon Noya
+            Saloon Toronto
           </Typography>
       
         </Link>

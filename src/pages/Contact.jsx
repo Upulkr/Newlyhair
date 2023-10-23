@@ -1,4 +1,18 @@
+import emailJs from '@emailjs/browser';
+
 function Contact() {
+
+  const serviceId = process.env.CONTACT_SERVICE_ID;
+const templateId = process.env.CONTACT_TEMPLATE_ID;
+const publicKey = process.env.CONTACT_PUBLIC_KEY;
+
+  const sendEmail=(e)=>{
+    e.preventDefault();
+    // alert('Submitted')
+// emailJs.sendForm('service_g1xvxic','template_2qqvyjj',e.target,'1oNKaXQwiTyrAENQ9',)
+emailJs.sendForm(serviceId,templateId,e.target,publicKey,)
+
+  }
   return (
     <div className="grid grid-cols-1 ">
       <div className="relative">
@@ -48,11 +62,12 @@ function Contact() {
           </div>
           <div className=" flex w-full flex-col rounded-xl bg-white p-5 md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3">
             <h2 className="title-font text-gray-900-c mb-1 text-center text-lg font-medium">
-              Feedback
+         Contact Us
             </h2>
             <p className="mb-5 text-center  leading-relaxed text-gray-600 ">
               Leave your feedback or contact Us
             </p>
+            <form onSubmit={sendEmail}>
             <div className="relative mb-4 text-center ">
               <label for="name" className="text-sm leading-7 text-gray-600">
                 Name
@@ -71,7 +86,7 @@ function Contact() {
               <input
                 type="email"
                 id="email"
-                name="email"
+                name="email_from"
                 className="w-full rounded border border-gray-300 bg-white px-3 py-1 text-base leading-8 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
               />
             </div>
@@ -85,13 +100,16 @@ function Contact() {
                 className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
               ></textarea>
             </div>
-            <button className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none">
-              Button
-            </button>
-            <p className="mt-3 text-xs text-gray-500">
+            <div className="flex justify-center"> 
+            <button type='submit' className=" rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none text-center">
+            Submit
+            </button></div>
+           
+            {/* <p className="mt-3 text-xs text-gray-500">
               Chicharrones blog helvetica normcore iceland tousled brook viral
               artisan.
-            </p>
+            </p> */}
+            </form>
           </div>
         </div>
       </section>
