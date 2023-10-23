@@ -1,4 +1,5 @@
 import React from 'react';
+import FooterTwo from './FooterTwo';
 
 function About() {
   return (
@@ -102,10 +103,11 @@ We are proud to be the #1 product line of choice for salon professionals. Over t
       {/* Section: Design Block */}
     </div>
     {/* Container for demo purpose */}
+    <FooterTwo />
   </>
   
     
   );
 }
 
-export default About;
+export default About

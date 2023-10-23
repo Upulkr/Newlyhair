@@ -14,11 +14,11 @@ import Customers from "@/data/HappyCustomersData";
 export function Home() {
   return (
     <>
-      <div className="mt- relative flex min-h-screen flex-col items-center justify-center bg-center">
+      <div className="mt- relative flex min-h-screen flex-col items-center justify-center bg-center sm:bg-cover">
         <img
           src="./img/hairbackground.jpg"
           alt="Background"
-          className="absolute h-screen  object-center bg-transparent bg-repeat sm:object-cover  min-w-full"
+          className=" sm:h-1/3object-center absolute min-w-full bg-transparent bg-repeat sm:object-cover  xl:h-screen"
           // style={{
           //   minHeight: "100%",
           //   minWidth: "100%",
@@ -52,7 +52,7 @@ export function Home() {
             color="black"
             className="mb-8 text-center font-black"
           >
-          Our happy clients say about us
+            Our happy clients say about us
           </Typography>
         </div>
         <Testomonials />
