@@ -4,12 +4,12 @@ import FooterTwo from './FooterTwo';
 function Booking() {
   return (
     <>
-      <div className="grid-row-2  grid   ">
+      <div className="grid-row-2  grid bg-white dark:bg-black  ">
         <div className=" mt-14 justify-center p-10 ">
-          <h1 className="  text-center text-2xl font-extrabold ">
+          <h1 className="  text-center text-2xl font-extrabold  dark:text-white ">
             Book an appointment
           </h1>
-          <p className=" p-3 text-center text-lg">
+          <p className=" p-3 text-center text-lg  dark:text-white">
             Get an appointment with our experienced Stylists & therapists
           </p>
         </div>
@@ -30,7 +30,7 @@ function Booking() {
                 {" "}
                 <label
                   htmlFor="name"
-                  className="m-3 block text-base font-medium text-[#07074D]"
+                  className="  dark:text-white m-3 block text-base font-medium text-[#07074D]"
                 >
                   Full Name
                 </label>
@@ -45,7 +45,7 @@ function Booking() {
               <div className="mb-5">
                 <label
                   htmlFor="phone"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
+                  className="  dark:text-white mb-3 block text-base font-medium text-[#07074D]"
                 >
                   Phone Number
                 </label>
@@ -60,7 +60,7 @@ function Booking() {
               <div className="mb-5">
                 <label
                   htmlFor="email"
-                  className="mb-3 block text-base font-medium text-[#07074D]"
+                  className="  dark:text-white mb-3 block text-base font-medium text-[#07074D]"
                 >
                   Email Address
                 </label>
@@ -77,7 +77,7 @@ function Booking() {
                   <div className="mb-5">
                     <label
                       htmlFor="date"
-                      className="mb-3 block text-base font-medium text-[#07074D]"
+                      className="  dark:text-white mb-3 block text-base font-medium text-[#07074D]"
                     >
                       Date
                     </label>
@@ -107,7 +107,7 @@ function Booking() {
                 </div>
               </div>
               <div>
-                <button className="hover:shadow-form w-full rounded-md bg-[#6A64F1] px-8 p-2 text-center text-base font-semibold text-white outline-none">
+                <button className="  dark:text-white hover:shadow-form w-full rounded-md bg-[#6A64F1] px-8 p-2 text-center text-base font-semibold text-white outline-none">
                   Book Appointment
                 </button>
               </div>

@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export default function Example({img}) {
     return (
-      <div className="relative overflow-hidden bg-white">
-        <div className="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+      <div className="relative overflow-hidden bg-white dark:bg-black">
+        <div className="pb-80 pt-8  sm:pb-40  lg:pb-48 lg:pt-40">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
             <div className="sm:max-w-lg">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Therapy Haven Salon - Where Wellness Comes to You
+              <h1 className=" dark:text-white text-4xl font-bold tracking-tight text-gray-900 sm:text-6x  dark:text-whitel">
+             Salon Toronto - Where Wellness Comes to You
               </h1>
-              <p className="mt-4 text-xl text-gray-500">
+              <p className="mt-4 text-xl text-gray-500  dark:text-white">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
                 if you live or die.
               </p>
@@ -84,7 +84,7 @@ export default function Example({img}) {
   
                 <div className="  inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700">
             
-               <Link to='/Services' >See hair and body treatment collection</Link>
+               <Link to='/Services'  className=" dark:text-white">See hair and body treatment collection</Link>
                   
                 
                 </div>

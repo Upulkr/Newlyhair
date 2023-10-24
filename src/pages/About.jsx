@@ -5,7 +5,7 @@ function About() {
   return (
     <>
     {/* Container for demo purpose */}
-    <div className="bg-white">
+    <div className="bg-white dark:bg-black">
       {/* Section: Design Block */}
       <section className="mb-32 text-center lg:text-left">
         <div className="py-12 md:px-6 md:px-12">
@@ -13,80 +13,19 @@ function About() {
             <div className="flex grid items-center lg:grid-cols-2">
               <div className="mb-12 md:mt-12 lg:mt-0 lg:mb-0">
                 <div className="relative z-[1] block rounded-lg bg-[hsla(0,0%,100%,0.55)] px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] backdrop-blur-[25px] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:px-12 lg:-mr-14">
-                  <h2 className="mb-2 text-3xl font-bold text-primary dark:text-primary-400">
+                  <h2 className=" dark:text-white mb-2 text-3xl font-bold text-primary dark:text-primary-400">
                  About Us
                   </h2>
                   <p className="mb-4 font-semibold">We Believe in Beautiful Hair, Every Day</p>
                   <p className="mb-6 text-neutral-500 dark:text-neutral-300">
                   
                   </p>
-                  <p className="mb-6 text-neutral-500 dark:text-neutral-300 text-justify">
+                  <p className=" dark:text-white mb-6 text-neutral-500 dark:text-neutral-300 text-justify">
                   Keratin Complex® revolutionized the beauty industry in 2007 when a group of industry innovators discovered a new way to care for your hair by merging proven keratin science with cutting-edge technology. They created Natural Keratin Smoothing Treatment, a first-of-its-kind smoothing treatment that pioneered the way to healthy, smooth, frizz-free hair and winner of the Favorite Smoothing Treatment by Behind the Chair Stylist Choice Award for 8 years in a row. Since then, we have continued to push boundaries and remain the leaders in smoothing with a full collection of customizable keratin treatments for every hair type. 
 
 We are proud to be the #1 product line of choice for salon professionals. Over the years we’ve brought the same power of Keratin to a full line of salon-quality hair care products including a comprehensive keratin-enhanced color line. Our unique formulas are engineered with our proprietary Keratin to eliminate frizz, repair damage, strengthen, and soften for undeniably healthy hair.
                   </p>
-                  {/* <ul className="flex justify-center lg:justify-start">
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 96 960 960"
-                        className="w-5 text-primary dark:text-primary-400"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-                        />
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 96 960 960"
-                        className="w-5 text-primary dark:text-primary-400"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-                        />
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 96 960 960"
-                        className="w-5 text-primary dark:text-primary-400"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-                        />
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 96 960 960"
-                        className="w-5 text-primary dark:text-primary-400"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-                        />
-                      </svg>
-                    </li>
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 96 960 960"
-                        className="w-5 text-primary dark:text-primary-400"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z"
-                        />
-                      </svg>
-                    </li>
-                  </ul> */}
+                 
                 </div>
               </div>
               <div className="md:mb-12 lg:mb-0">

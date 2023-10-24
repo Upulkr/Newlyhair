@@ -12,7 +12,7 @@ function ChatBox() {
         {/* component */}
         <button
         onClick={()=>setOpen(!open)}
-          className="fixed bottom-3 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-black hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
+          className=" bg-white dark:bg-black fixed bottom-3 right-4 inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-black hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
           type="button"
           aria-haspopup="dialog"
           aria-expanded="false"
@@ -28,7 +28,7 @@ function ChatBox() {
             strokeWidth={2}
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-white block border-gray-200 align-middle"
+            className="text-white block border-white-200 align-middle  dark:text-white bg-white dark:bg-black"
           >
             <path
               d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"
@@ -38,12 +38,12 @@ function ChatBox() {
         </button>
         {open? <div
           style={{ boxShadow: "0 0 #0000, 0 0 #0000, 0 1px 2px 0 rgb(0 0 0 / 0.05)" }}
-          className="fixed bottom-[calc(4rem+1.5rem)] right-0 sm:mr-4 bg-white p-6 rounded-lg border border-[#e5e7eb] w-full sm:w-[440px] h-[620px]"
+          className="fixed bottom-[calc(4rem+1.5rem)] right-0 sm:mr-4 bg-white  bg-white dark:bg-black p-6 rounded-lg border border-[#e5e7eb] w-full sm:w-[440px] h-[620px]"
         >
           {/* Heading */}
           <div className="flex flex-col space-y-1.5 pb-6">
-            <h2 className="font-semibold text-lg tracking-tight">Chatbot</h2>
-            <p className="text-sm text-[#6b7280] leading-3">
+            <h2 className="font-semibold text-lg tracking-tight  dark:text-white">Chatbot</h2>
+            <p className="text-sm text-[#6b7280] leading-3  dark:text-white dark:text-white">
               Powered by Mendable and Vercel
             </p>
           </div>
@@ -75,8 +75,8 @@ function ChatBox() {
                 </div>
               </span>
               <p className="leading-relaxed">
-                <span className="block font-bold text-gray-700">AI </span>Hi, how can
-                I help you today?
+                <span className="block font-bold text-gray-700  dark:text-white ">AI </span><p className="dark:text-white">Hi, how can
+                I help you today?</p>
               </p>
             </div>
             {/*  User Chat Message */}
@@ -97,7 +97,7 @@ function ChatBox() {
                 </div>
               </span>
               <p className="leading-relaxed">
-                <span className="block font-bold text-gray-700">You </span>
+                <span className="block font-bold text-gray-700  dark:text-white ">You </span>
               </p>
             </div>
             {/* Ai Chat Message  */}
@@ -123,7 +123,7 @@ function ChatBox() {
                 </div>
               </span>
               <p className="leading-relaxed">
-                <span className="block font-bold text-gray-700">AI </span>Sorry, I
+                <span className="block font-bold text-gray-700  dark:text-white ">AI </span>Sorry, I
                 
               </p>
             </div>
@@ -132,11 +132,11 @@ function ChatBox() {
           <div className="flex items-center pt-0">
             <form className="flex items-center justify-center w-full space-x-2">
               <input
-                className="flex h-10 w-full rounded-md border border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] disabled:cursor-not-allowed disabled:opacity-50 text-[#030712] focus-visible:ring-offset-2"
+                className="flex h-10 w-full rounded-md border dark:text-white  border-[#e5e7eb] px-3 py-2 text-sm placeholder-[#6b7280] focus:outline-none focus:ring-2 focus:ring-[#9ca3af] disabled:cursor-not-allowed disabled:opacity-50 text-[#030712] focus-visible:ring-offset-2"
                 placeholder="Type your message"
                 defaultValue=""
               />
-              <button  onSubmit={onHandleSubmit}className="inline-flex items-center justify-center rounded-md text-sm font-medium text-[#f9fafb] disabled:pointer-events-none disabled:opacity-50 bg-black hover:bg-[#111827E6] h-10 px-4 py-2">
+              <button  onSubmit={onHandleSubmit}className=" dark:text-white inline-flex items-center justify-center rounded-md text-sm font-medium text-[#f9fafb] disabled:pointer-events-none disabled:opacity-50 bg-black hover:bg-[#111827E6] h-10 px-4 py-2">
                 Send
               </button>
             </form>

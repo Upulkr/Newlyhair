@@ -8,17 +8,17 @@ const year = new Date().getFullYear();
 export function Footer({ title, description, socials, menus, copyright }) {
   return (
     <>
-    <footer className=" flex  relative px-4 pt-8 pb-6 bg-white sm:flex-cols-1">
+    <footer className="  bg-white dark:bg-black flex  relative px-4 pt-8 pb-6  dark:text-white bg-white sm:flex-cols-1">
       <div className=" grid sm:grid-cols-1  lg:grid-cols-1 md:cols-1 xl:grid-cols-3  container mx-auto">
         <div className="flex flex-wrap pt-6 text-center lg:text-left">
           <div className="w-full px-4 lg:w-6/12 j">
-            <Typography variant="h2" className=" m-3 mx-auto grid w-max text-center " color="blacke">
+            <Typography variant="h2" className=" m-3 mx-auto grid w-max text-center " color="black dark:text-white">
               {title}
             </Typography>
-            <Typography className="  text-center font-normal text-black">
+            <Typography className="   dark:text-white text-center font-normal text-black">
               {description}
             </Typography>
-            <div className="mx-auto mt-6 mb-8  ml-3 flex justify-center gap-2 md:mb-0 lg:justify-start">
+            <div className=" dark:text-white mx-auto mt-6 mb-8  ml-3 flex justify-center gap-2 md:mb-0 lg:justify-start">
               {socials.map(({ color, name, path }) => (
                 <a
                   key={name}
@@ -42,19 +42,19 @@ export function Footer({ title, description, socials, menus, copyright }) {
       }}></iframe>
         <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md p-2">
           <div className="lg:w-1/2 px-6">
-            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
-            <p className="mt-1">Hair and body Toronto</p>
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs  dark:text-white">ADDRESS</h2>
+            <p className="mt-1  dark:text-white">Hair and body Toronto</p>
           </div>
           <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
-            <a className="text-indigo-500 leading-relaxed">example@email.com</a>
+            <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs  dark:text-white">EMAIL</h2>
+            <a className="text-indigo-500 leading-relaxed  dark:text-white">example@email.com</a>
             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
-            <p className="leading-relaxed">123-456-7890</p>
+            <p className="leading-relaxed  dark:text-white">123-456-7890</p>
           </div>
         </div>
       </div>
           <div className="mx-auto grid w-max m-5  lg:mt-0">
-          <Typography variant="h3" className=" font-normal text-black text-center">
+          <Typography variant="h3" className=" dark:text-white  font-normal text-black text-center">
           SALON HOURS
             </Typography>
            {OpenTimes.map(({open,close,day,id})=>     <OpenHours open={open} close={close} day={day} key={id}/>)}
@@ -98,7 +98,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
       <div className="mx-auto w-full px-4 text-center">
         <Typography
           variant="small"
-          className="font-normal text-black"
+          className="font-normal text-black  dark:text-white"
         >
          
           {copyright}

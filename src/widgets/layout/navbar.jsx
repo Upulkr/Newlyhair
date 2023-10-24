@@ -32,24 +32,7 @@ export function Navbar({ routes }) {
           className="capitalize transition ease-in-out delay-150  text-black font-extrabold"
           
         >
-{/* 
-          <Link
-            to={path}
-            target={element}
-            className="flex items-center gap-1 p-1 font-normal"
-          /> */}
-          
-            {/* <Link
-              href={path}
-              target={element}
-              className="flex items-center gap-1 p-1 font-normal"
-            >
-              {icon &&
-                React.createElement(icon, {
-                  className: "w-[18px] h-[18px] opacity-75 mr-1",
-                })}
-              {name}
-            </Link> */}
+
            
             <Link
               to={path}
@@ -101,29 +84,16 @@ export function Navbar({ routes }) {
               <div className="container mx-auto">
           {navList}
 
-          {/* {React.cloneElement(action, {
-            className: "w-full block",
-          })} */}
+        
         </div>
      
       </MobileNav>
-   {/* <Switcher/> */}
+
     </MTNavbar>
     
   );
 }
 
-// Navbar.defaultProps = {
-//   brandName: "Saloon Noya",
-//   action: <Link to={"/"}></Link>,
-// };
 
-// Navbar.propTypes = {
-//   brandName: PropTypes.string,
-//   routes: PropTypes.arrayOf(PropTypes.object).isRequired,
-//   action: PropTypes.node,
-// };
-
-// Navbar.displayName = "/src/widgets/layout/navbar.jsx";
 
 export default Navbar;

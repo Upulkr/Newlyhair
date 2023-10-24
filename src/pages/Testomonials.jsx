@@ -2,7 +2,7 @@ import Customers from "@/data/HappyCustomersData";
 
 export default function Testimonials() {
     return (
-        <section className="py-12 bg-gray-50 sm:py-16 lg:py-20">
+        <section className="py-12 sm:py-16 lg:py-20  bg-white dark:bg-black">
             <div className="px-4 mx-auto w-full h-100 sm:px-6 lg:px-8 justify-center">
                 <div className="text-center ">
                     <h2 className="mt-4 text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj"></h2>

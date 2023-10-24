@@ -40,7 +40,7 @@ console.log(records)
     )
   }
   return (
-    <div className="grid grid-cols-1 ">
+    <div className="grid grid-cols-1 bg-white dark:bg-black">
       <div className="relative">
         {" "}
         <img src="./img/p.jpg" className="h-80 w-full object-cover"></img>{" "}
@@ -67,7 +67,7 @@ console.log(records)
                 <h2 className="title-font text-xs font-semibold tracking-widest text-gray-900">
                   ADDRESS
                 </h2>
-                <p className="mt-1">
+                <p className="mt-1 ">
                   Photo booth tattooed prism, portland taiyaki hoodie neutra
                   typewriter
                 </p>
@@ -90,12 +90,13 @@ console.log(records)
             <h2 className="title-font text-gray-900-c mb-1 text-center text-lg font-medium">
               Contact Us
             </h2>
-            <p className="mb-5 text-center  leading-relaxed text-gray-600 ">
+            <p className="mb-5 text-center  leading-relaxed text-gray-600  ">
               Leave your feedback or contact Us
             </p>
-            <form onSubmit={sendEmail}>
-              <div className="relative mb-4 text-center ">
-                <label for="name" className="text-sm leading-7 text-gray-600">
+            <div className=''>
+            <form onSubmit={sendEmail} className='dark'>
+              <div className="relative mb-4 text-center dark ">
+                <label for="name" className="text-sm leading-7 text-gray-600 dark  dark:text-white">
                   Name
                 </label>
                 <input
@@ -142,6 +143,7 @@ console.log(records)
               artisan.
             </p> */}
             </form>
+            </div>
           </div>
         </div>
       </section>

@@ -1,13 +1,18 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Navbar } from "@/widgets/layout";
+
 import routes from "@/routes";
+import NewNav from '../src/pages/NewNav'
+import { ThemeProviders } from "./pages/ThemeContext";
 
 
 function App() {
   return (
+    
     <> 
-      <div className="fixed top-0  container left-2/4 z-10 mx-auto -translate-x-2/4 p-4">
-    <Navbar routes={routes} />
+      <div className="bg-white dark:bg-black ">
+    {/* <Navbar routes={routes} /> */}
+    
+    <NewNav  />
     
 
       </div>
