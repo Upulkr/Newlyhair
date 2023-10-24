@@ -8,7 +8,9 @@ import { ThemeProvider } from "@material-tailwind/react";
 import "../public/css/tailwind.css";
 import { ThemeProviders } from "./pages/ThemeContext";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
+
   <React.StrictMode>
     <ThemeProviders>
     <BrowserRouter>
@@ -17,7 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
         <App />
 
-      
  
     </BrowserRouter>
     </ThemeProviders>

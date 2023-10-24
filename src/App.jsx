@@ -3,7 +3,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import routes from "@/routes";
 import NewNav from '../src/pages/NewNav'
 import { ThemeProviders } from "./pages/ThemeContext";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

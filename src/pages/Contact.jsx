@@ -1,5 +1,9 @@
 import emailJs from '@emailjs/browser';
-import { useState } from 'react';
+
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import { useRef, useState } from 'react';
 
 function Contact() {
 
@@ -8,39 +12,29 @@ function Contact() {
   const publicKey = process.env.CONTACT_PUBLIC_KEY;
 
 
+  const form = useRef();
 
 
-  const [formValues, setFormValues] = useState({
-    email: '',
-    name: '',
-    message: '',
 
-  })
-  const [records, setRecords] = useState([]
-  )
-
-console.log(records)
 
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     // emailJs.sendForm('service_g1xvxic','template_2qqvyjj',e.target,'1oNKaXQwiTyrAENQ9',)
-    emailJs.sendForm(serviceId, templateId, e.target, publicKey,)
-    alert('submitted')
+    emailJs.sendForm(serviceId, templateId, e.target, publicKey,).then((result)=>{
+      console.log(result.text);
+      toast.success('Well done')
+    },(error)=>{console.log(error.text);
+      toast.error('not submitted')})
 
 
-    setRecords([...records, formValues])
-    setFormValues(
-      {
-        email: '',
-        name: '',
-        message: '',
-      }
-    )
-  }
+
+    }
+  
   return (
     <div className="grid grid-cols-1 bg-white dark:bg-black">
+       <ToastContainer />
       <div className="relative">
         {" "}
         <img src="./img/p.jpg" className="h-80 w-full object-cover"></img>{" "}
@@ -94,14 +88,14 @@ console.log(records)
               Leave your feedback or contact Us
             </p>
             <div className=''>
-            <form onSubmit={sendEmail} className='dark'>
+            <form onSubmit={sendEmail} className='dark' ref={form}>
               <div className="relative mb-4 text-center dark ">
                 <label for="name" className="text-sm leading-7 text-gray-600 dark  dark:text-white">
                   Name
                 </label>
                 <input
                   onChange={(e) => setFormValues({ ...formValues, name: e.target.value })}
-                  value={formValues.name}
+             
                   type="text"
                   id="name"
                   name="name"
@@ -114,7 +108,7 @@ console.log(records)
                 </label>
                 <input
                   onChange={(e) => setFormValues({ ...formValues, email: e.target.value })}
-                  value={formValues.email}
+              
                   type="email"
                   id="email"
                   name="email_from"
@@ -126,8 +120,8 @@ console.log(records)
                   Message
                 </label>
                 <textarea
-                  onChange={(e) => setFormValues({ ...formValues, message: e.target.value })}
-                  value={formValues.message}
+                  
+               
                   id="message"
                   name="message"
                   className="h-32 w-full resize-none rounded border border-gray-300 bg-white px-3 py-1 text-base leading-6 text-gray-700 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
