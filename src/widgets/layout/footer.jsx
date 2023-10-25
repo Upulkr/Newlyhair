@@ -60,33 +60,7 @@ export function Footer({ title, description, socials, menus, copyright }) {
            {OpenTimes.map(({open,close,day,id})=>     <OpenHours open={open} close={close} day={day} key={id}/>)}
       
            
-            {/* {menus.map(({ name, items }) => (
-              <div key={name}>
-                <Typography
-                  variant="small"
-                  color="white"
-                  className="mb-2 block font-medium uppercase"
-                >
-                  {name}
-                </Typography>
-                <ul className="mt-3">
-                  {items.map((item) => (
-                    <li key={item.name}>
-                      <Typography
-                        as="a"
-                        href={item.path}
-                        target="_blank"
-                        rel="noreferrer"
-                        variant="small"
-                        className="mb-2 block font-normal text-white hover:text-blue-gray-700"
-                      >
-                        {item.name}
-                      </Typography>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))} */}
+          
           </div>
         </div>
         

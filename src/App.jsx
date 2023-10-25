@@ -1,16 +1,15 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 import routes from "@/routes";
-import NewNav from '../src/pages/NewNav'
-import { ThemeProviders } from "./pages/ThemeContext";
-import { ToastContainer, toast } from 'react-toastify';
+import NewNav from '../src/pages/NewNav';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     
     <> 
-      <div className="bg-white dark:bg-black ">
+      <div className="bg-white">
     {/* <Navbar routes={routes} /> */}
     
     <NewNav  />

@@ -1,12 +1,5 @@
+import React from 'react'
 
-import {
-  Card,
-  CardBody,
-  Typography,CardFooter,
-  CardHeader,
-  Tooltip
-
-} from "@material-tailwind/react";
 
 export function FeatureCard({ img, title, description }) {
   return (

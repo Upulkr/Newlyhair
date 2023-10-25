@@ -10,14 +10,14 @@ import Testomonials from "./Testomonials";
 
 export function Home() {
   return (
-    <div className="bg-white dark:bg-black">
-      <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white dark:bg-black ">
+    <div className="">
+      <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white ">
       <img
             alt="nature"
-            className="h-w-full object-contain mt-5 sm:max-h bg-white dark:bg-black "
+            className="h-w-full object-contain mt-5 sm:max-h bg-white  "
             src="./img/hairbackground.jpg"
           />
-        <div className="max-w-8xl container relative mx-auto bg-white dark:bg-black ">
+        <div className="max-w-8xl container relative mx-auto bg-white  ">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center ">
             <Typography variant="h2" color="black" className="  font-black sm:font-normal">
               Unleash Your Beauty
@@ -34,11 +34,11 @@ export function Home() {
         </div>
       </div>
       {/* <Video /> */}
-      <section className="bg-white pb-20  sm:pt-1  bg-white dark:bg-black ">
+      <section className="bg-white pb-20  sm:pt-1  bg-white  ">
         <Example />
       </section>
 
-      <section className="m-7 px-4 pb-20 pt-4 bg-white dark:bg-black">
+      <section className="m-7 px-4 pb-20 pt-4 bg-white ">
         <div className="container mx-auto">
           <Typography
             variant="h1"
@@ -56,7 +56,7 @@ export function Home() {
         </div> */}
       </section>
 
-      <section className=" bg-white dark:bg-black px-4 pb-20 pt-4">
+      <section className=" bg-white  px-4 pb-20 pt-4">
         <div className="container mx-auto">
           <Typography
             variant="h1"
@@ -65,7 +65,7 @@ export function Home() {
           >
             MEET THE EXPERTS
           </Typography>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 bg-white dark:bg-black">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 bg-white ">
             {teamData.map(({ img, name, position, socials, id }) => (
               <TeamCard
                 key={id}
@@ -87,7 +87,7 @@ export function Home() {
         </div>
       </section>
 
-      <div className="bg-blue-gray-900 bg-white dark:bg-black">
+      <div className="bg-blue-gray-900 bg-white ">
         <Footer />
         {/* <div>  <OpenHours  key={id}
             id={id}
