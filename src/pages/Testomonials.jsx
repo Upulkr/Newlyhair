@@ -1,4 +1,5 @@
 import Customers from "@/data/HappyCustomersData";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 export default function Testimonials() {
   return (
@@ -60,7 +61,7 @@ export default function Testimonials() {
                     </p>
                   </blockquote>
                   <div className="mt-4 flex items-center">
-                    <img
+                    <LazyLoadImage
                       className="h-11 w-11 flex-shrink-0 rounded-full object-cover"
                       src={img}
                       alt=""

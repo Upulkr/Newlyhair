@@ -4,6 +4,7 @@ import emailJs from '@emailjs/browser';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { useRef, useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Contact() {
 
@@ -37,7 +38,7 @@ function Contact() {
        <ToastContainer />
       <div className="relative">
         {" "}
-        <img src="./img/p.jpg" className="h-80 w-full object-cover"></img>{" "}
+        <LazyLoadImage src="./img/p.jpg" className="h-80 w-full object-cover"></LazyLoadImage>{" "}
       </div>
 
       <section className="  body-font relative">

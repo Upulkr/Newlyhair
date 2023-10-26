@@ -4,6 +4,7 @@ import routes from "@/routes";
 import NewNav from '../src/pages/NewNav';
 
 import 'react-toastify/dist/ReactToastify.css';
+import Header from "./pages/Header";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="bg-white">
     {/* <Navbar routes={routes} /> */}
     
-    <NewNav  />
+   <Header/>
     
 
       </div>

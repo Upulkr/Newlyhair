@@ -6,16 +6,13 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import PropTypes from "prop-types";
-import { useState } from "react";
 
-export function TeamCard({ img, name, position, socials, id }) {
-  const [activeCard, setActiveCard] = useState("2");
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-  // function handleClick(){
-  //   setActiveCard(id);
+export function TeamCard({ img, name, position,  }) {
+ 
 
-  // //  ()=> setActiveCard(activeCard)
-  // }
+ 
   return (
     <Card
       className="   bg-white dark:bg-black sm:flex-col-1 md:flex-cols-2 lg:flex-cols-3 xl:flex-cols-4 2xl:flex-cols-6  w-100 ... transition delay-150 duration-300 ease-in-out  hover:-translate-y-1 hover:scale-110"
@@ -27,7 +24,7 @@ export function TeamCard({ img, name, position, socials, id }) {
         className=" rounded object-cover object-center"
       ></CardHeader>
       <CardBody className="text-center ">
-        <img
+        <LazyLoadImage
           variant="gradient"
           // color={color}
           src={img}

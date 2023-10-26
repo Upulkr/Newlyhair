@@ -7,13 +7,13 @@ import { IconButton, Typography } from "@material-tailwind/react";
 import ChatBox from "./ChatBox";
 import Example from "./NewServices";
 import Testomonials from "./Testomonials";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 export function Home() {
   return (
     <div className="">
       <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white  ">
-      <img
-            alt="nature"
+      <LazyLoadImage 
+            alt="bg image"
             className="h-w-full object-contain mt-5 sm:max-h bg-white  "
             src="./img/hairbackground.jpg"
           />

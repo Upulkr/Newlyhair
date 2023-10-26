@@ -64,7 +64,7 @@ export default function NewNav() {
           size="sm"
           color="white"
           className="ml-auto bg-white  text-inherit  hover:bg-transparent focus:bg-transparent active:bg-transparent  dark:text-white lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
+          onClick={() => setOpenNav(!open)}
         >
           {openNav ? (
             <XMarkIcon strokeWidth={2} className="h-6 w-6" />
