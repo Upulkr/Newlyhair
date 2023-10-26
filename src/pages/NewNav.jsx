@@ -21,7 +21,7 @@ export default function NewNav() {
   }, []);
 
   const navList = (
-    <ul className=" mb-7 mt-2  flex flex-col gap-2 bg-white text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
+    <ul className="  mt-3  flex flex-col  bg-white text-inherit lg:mb-0 lg:mt-0 lg:flex-row lg:items-center gap-1 ">
       {routes.map(({ name, icon, path }) => (
         <Typography
           key={name}
@@ -47,14 +47,14 @@ export default function NewNav() {
   );
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl  bg-white shadow-none  ">
+    <Navbar className="mx-auto max-w-screen-xl  bg-white shadow-none mt-2 ">
       <div className=" mx-auto flex items-center justify-between text-blue-gray-900">
         <Link to="/">
-          <Typography className="ml-2 mr-4 cursor-pointer font-bold  dark:text-white">
+          <Typography className="cursor-pointer font-bold  dark:text-white">
             Saloon Toronto
           </Typography>
         </Link>
-        <div className="hidden bg-white  dark:text-white lg:block">
+        <div className="hidden lg:block">
           {navList}
         </div>
         {/* <Toggle/> */}

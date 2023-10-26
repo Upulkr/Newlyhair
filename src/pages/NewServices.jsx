@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Example({img}) {
     return (
       <div className="relative overflow-hidden bg-white dark:bg-black">
-        <div className="pb-80 pt-8  sm:pb-40  lg:pb-48 lg:pt-40">
+        <div className="pb-80 pt-3  sm:pb-40  lg:pb-48 lg:pt-40">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
             <div className="sm:max-w-lg">
               <h1 className=" dark:text-white text-4xl font-bold tracking-tight text-gray-900 sm:text-6x  dark:text-whitel">

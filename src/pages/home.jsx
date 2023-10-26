@@ -11,34 +11,34 @@ import Testomonials from "./Testomonials";
 export function Home() {
   return (
     <div className="">
-      <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white ">
+      <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white  ">
       <img
             alt="nature"
             className="h-w-full object-contain mt-5 sm:max-h bg-white  "
             src="./img/hairbackground.jpg"
           />
-        <div className="max-w-8xl container relative mx-auto bg-white  ">
+        <div className="max-w-8xl container relative mx-auto bg-white  m-9 pb-5 ">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center ">
-            <Typography variant="h2" color="black" className="  font-black sm:font-normal">
+            <Typography variant="h1" color="black" className=" p-5 m-4   sm:pt-8 ">
               Unleash Your Beauty
             </Typography>
-            <Typography variant="lead" color="white" className="">
+            <Typography variant="lead" color="balck" className="">
               Welcome to hair and body Therapy Salon!
             </Typography>
-            <div className="mt-24 pt-16">
-              <h1 className="  text-center text-3xl font-black text-white ">
+            {/* <div className="">
+              <h1 className="  text-center text-3xl font-black text-black hidden sm:block">
                 These services are for you
               </h1>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       {/* <Video /> */}
-      <section className="bg-white pb-20  sm:pt-1  bg-white  ">
+      <section className=" m-9  bg-white  ">
         <Example />
       </section>
 
-      <section className="m-7 px-4 pb-20 pt-4 bg-white ">
+      <section className="m-7 px-4 pb-10 pt-4 bg-white ">
         <div className="container mx-auto">
           <Typography
             variant="h1"
