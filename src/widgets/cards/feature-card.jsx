@@ -1,4 +1,5 @@
 import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 
 export function FeatureCard({ img, title, description }) {
@@ -7,10 +8,10 @@ export function FeatureCard({ img, title, description }) {
 
   <div className=" bg-white dark:bg-black" >
  
-    <img
+    <LazyLoadImage 
       className="rounded-lg w-full"
       src={img}
-    
+      alt="services"
     />
 
     {/* <p className="text-indigo-500 font-semibold text-base mt-2"></p>

@@ -1,6 +1,7 @@
 import React from "react";
 import "@dotlottie/player-component";
 import FooterTwo from './FooterTwo';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 function Booking() {
   return (
     <>
@@ -17,7 +18,7 @@ function Booking() {
         <div className="grid md:grid-cols-2 ">
           {" "}
           <div className="m-3 items-center">
-            <img
+            <LazyLoadImage
               className=" left-0 top-0 -z-10 h-full w-full object-cover"
               src="/img/book.jpg"
               alt=""

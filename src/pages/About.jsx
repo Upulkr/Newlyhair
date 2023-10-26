@@ -1,5 +1,6 @@
 import React from 'react';
 import FooterTwo from './FooterTwo';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 function About() {
   return (
@@ -8,7 +9,7 @@ function About() {
     <div className="bg-white dark:bg-black">
       {/* Section: Design Block */}
       <section className="mb-32 text-center lg:text-left">
-        <div className="py-12 md:px-6 md:px-12">
+        <div className="py-12 md:px-6">
           <div className="container mx-auto xl:px-32">
             <div className="flex grid items-center lg:grid-cols-2">
               <div className="mb-12 md:mt-12 lg:mt-0 lg:mb-0">
@@ -29,7 +30,7 @@ We are proud to be the #1 product line of choice for salon professionals. Over t
                 </div>
               </div>
               <div className="md:mb-12 lg:mb-0">
-                <img
+                <LazyLoadImage
                   src="./img/a.jpg"
                   className="lg:rotate-[6deg] w-full rounded-lg shadow-lg dark:shadow-black/20"
                   alt="image"
