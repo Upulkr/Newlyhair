@@ -23,15 +23,10 @@
     "prop-type": "^0.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
-<<<<<<< HEAD
+
     "react-dom": "^18.2.0","react-lazy-load-image-component": "^1.6.0",
-=======
-    "react-dom": "^18.2.0",
 
-    "react-icons": "^4.11.0",
 
-    "react-lazy-load-image-component": "^1.6.0",
->>>>>>> f2c9624301797751eb1d207104309333de07f179
     "react-router-dom": "^6.4.2",
     "react-scripts": "^3.0.1",
     "react-toastify": "^9.1.3",
