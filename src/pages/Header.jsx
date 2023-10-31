@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   IconButton,
   MobileNav,
@@ -7,26 +7,35 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+
 export default function Header() {
+  const [click, setClick] = useState(false);
 
   const [open, setOpen] = useState(false);
+
+  const underLine = () => {
+    setClick(!click);
+    // setClick(false)
+  };
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpen(false)
     );
-  }, [])
+  }, []);
   return (
     <header className="bg-white font-sans shadow-md  ">
       <section class="max-sm:flex-col max-lg:min-h-[60px]  relative flex items-center border-b border-gray-200 px-10 py-3 lg:min-h-[80px] lg:justify-center">
-        <Link to='/' class="max-md:w-full max-sm:mb-4">
+        <Link to="/" class="max-md:w-full max-sm:mb-4">
           <img src="/img/logo.png" alt="logo" class="w-36 md:w-[170px] " />
         </Link>
-        <h2 className="uppercase"> Salon Toronto</h2>
-        <div class="max-md:ml-auto flex items-center md:absolute md:right-10">
+        <NavLink to='/'className={({ isActive }) => (isActive ? "hover:text-amber-600 G" : "")} >  <h2 className="uppercase"> Salon Toronto</h2></NavLink>
+      
+        <div className=" max-md:ml-auto mx-auto flex items-center md:absolute md:right-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="mr-6 cursor-pointer hover:fill-[#007bff]"
+            className="mr-6 cursor-pointer hover:fill-[#007bff]"
             width="20px"
             height="20px"
             viewBox="0 0 512 512"
@@ -38,7 +47,7 @@ export default function Header() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="mr-6 cursor-pointer hover:fill-[#007bff]"
+            className="mr-6 cursor-pointer hover:fill-[#007bff]"
             width="20px"
             height="20px"
             viewBox="0 0 409.61 409.61"
@@ -55,7 +64,7 @@ export default function Header() {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="mr-6 cursor-pointer hover:fill-[#007bff]"
+            className="mr-6 cursor-pointer hover:fill-[#007bff]"
             width="20px"
             height="20px"
             viewBox="0 0 682.667 682.667"
@@ -65,7 +74,10 @@ export default function Header() {
                 <path d="M0 512h512V0H0Z" data-original="#000000" />
               </clipPath>
             </defs>
-            <g clip-path="url(#Link)" transform="matrix(1.33 0 0 -1.33 0 682.667)">
+            <g
+              clip-path="url(#Link)"
+              transform="matrix(1.33 0 0 -1.33 0 682.667)"
+            >
               <path
                 d="M140.008 89h-30c-11.046 0-20 8.954-20 20v186c0 11.046 8.954 20 20 20h30c11.045 0 20-8.954 20-20V109c0-11.046-8.955-20-20-20m-13.991 257C103.311 346 85 364.368 85 387.003 85 409.632 103.311 428 126.017 428c22.616 0 40.977-18.368 40.977-40.997 0-22.635-18.361-41.003-40.977-41.003M402 89h-29c-11.046 0-20 8.954-20 20v90.341c0 26.121-1.164 59.726-37.092 59.726-36.429 0-43.908-28.47-43.908-57.856V109c0-11.046-8.954-20-20-20h-28c-11.046 0-20 8.954-20 20v186c0 11.046 8.954 20 20 20h28c11.046 0 20-8.954 20-20v-10.741h.065c9.334 17.708 32.19 34.741 66.249 34.741C409.186 319 422 274.002 422 213.336V109c0-11.046-8.954-20-20-20"
                 data-original="#000000"
@@ -82,91 +94,83 @@ export default function Header() {
               />
             </g>
           </svg>
-     
         </div>
       </section>
-      <div class="flex min-h-[50px] flex-wrap items-center overflow-x-auto px-10">
-      <div className="ml-auto md:hidden">
-            <IconButton
-              variant="text"
-              size="sm"
-              color="white"
-              className="bg-white text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent dark:text-white"
-              onClick={() => setOpen(!open)}
-            >
-              {open ? (
-                <XMarkIcon strokeWidth={2} className="h-6 w-6" />
-              ) : (
-                <Bars3Icon strokeWidth={2} className="h-6 w-6" />
-              )}
-            </IconButton>
-          </div>
-          <MobileNav
-            className="rounded-xl bg-white px-4 pb-4 pt-2 text-blue-gray-900 dark:text-white"
-            open={open}
+      <div className="flex min-h-[50px] flex-wrap items-center overflow-x-auto px-10">
+        <div className="ml-auto md:hidden">
+          <IconButton
+            variant="text"
+            size="sm"
+            color="white"
+            className="bg-white text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent dark:text-white"
+            onClick={() => setOpen(!open)}
           >
-            <div className="mx-auto dark:text-white ">
-              <ul className="text-center">
-                <Link to="/">
-                  <li  className="hover:text-[#007bff]">Home</li>
-                </Link>
-                <Link to="/about">
-                  <li  className="hover:text-[#007bff]">About</li>
-                </Link>
-                <Link to="/services">
-                  <li  className="hover:text-[#007bff]">Services</li>
-                </Link>
-                <Link to="/contact">
-                  <li className="hover:text-[#007bff]">Contact</li>
-                </Link>
-              </ul>
-            </div>
-          </MobileNav>
-        <ul class="max-lg:space-y-3 max-lg:block max-lg:mt-2 invisible flex w-full justify-center sm:visible lg:space-x-10 ">
-          <li class="max-lg:border-b max-lg:py-2 sm:mx-2">
-            <Link
-             to='/'
-              class="block text-[15px] font-bold text-[#007bff] hover:text-[#007bff]"
+            {open ? (
+              <XMarkIcon strokeWidth={2} className="h-6 w-6" />
+            ) : (
+              <Bars3Icon strokeWidth={2} className="h-6 w-6" />
+            )}
+          </IconButton>
+        </div>
+        <MobileNav
+          className="rounded-xl bg-white px-4 pb-4 pt-2 text-blue-gray-900 dark:text-white"
+          open={open}
+        >
+          <div className="mx-auto dark:text-white ">
+            <ul className="text-center">
+            {pageTitle.map((t)=><li className=" max-lg:border-b max-lg:py-2 text-[#007bff] sm:mx-2" key={t.id}>
+            <NavLink
+              to={t.path}
+              className={({ isActive }) => (isActive ? "underline underline-offset-1 decoration-4  decoration-amber-500 rounded-lg" : "")}
             >
-              Home
-            </Link>
-          </li>
+             {t.title}
+            </NavLink>
+          </li>)}
+            </ul>
+          </div>
+        </MobileNav>
+        <ul className=" mb-4 max-lg:space-y-3 max-lg:block max-lg:mt-2 invisible flex w-full justify-center sm:visible lg:space-x-10 ">
+          {pageTitle.map((t)=><li className=" max-lg:border-b max-lg:py-2 text-[#007bff] sm:mx-2" key={t.id}>
+            <NavLink
+              to={t.path}
+              className={({ isActive }) => (isActive ? "underline underline-offset-4 decoration-4  decoration-amber-500 rounded-lg" : "")}
+            >
+             {t.title}
+            </NavLink>
+          </li>)}
+          
 
-          <li class="max-lg:border-b max-lg:py-2 sm:mx-2">
-            <Link
-             to='/services'
-              class="block text-[15px] font-bold text-gray-600 hover:text-[#007bff]"
-            >
-              Services
-            </Link>
-          </li>
-
-          <li class="max-lg:border-b max-lg:py-2 sm:mx-2">
-            <Link
-             to='/about'
-              class="block text-[15px] font-bold text-gray-600 hover:text-[#007bff]"
-            >
-              About
-            </Link>
-          </li>
-          <li class="max-lg:border-b max-lg:py-2 sm:mx-2">
-            <Link
-             to='/contact'
-              class="block text-[15px] font-bold text-gray-600 hover:text-[#007bff]"
-            >
-              Contact
-            </Link>
-          </li>
-          <li class="max-lg:border-b max-lg:py-2 sm:mx-2">
-            <Link
-             to='/booking'
-              class="block text-[15px] font-bold text-gray-600 hover:text-[#007bff]"
-            >
-              Book An Appointment
-            </Link>
-          </li>
+        
         </ul>
       </div>
     </header>
   );
 }
+
+export const pageTitle = [
+  {
+    id: 1,
+    title: "Home",
+    path:'/'
+  },
+  {
+    id: 2,
+    title: "Services",
+    path:'/services'
+  },
+  {
+    id: 2,
+    title: "About",
+    path:'/about'
+  },
+  {
+    id: 3,
+    title: "Contact",
+    path:'/contact'
+  },
+  {
+    id: 4,
+    title: "Book An Appointment",
+    path:'/booking'
+  },
+];

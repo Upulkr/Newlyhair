@@ -6,8 +6,8 @@ export function FeatureCard({ img, title, description }) {
   return (
   
 
-    <div className=" bg-gray-50 overflow-hidden">
-  <div className="m-auto px-6 space-y-8 text-gray-500 md:px-12">
+    <div className=" bg-gray-50 overflow-hidden  ">
+  <div className="transform transition duration-500 hover:scale-110 m-auto px-6 space-y-8 text-gray-500 md:px-12 ">
     <div>
      
       <h2 className="mt-4 text-2xl text-gray-900 font-bold md:text-4xl text-center">
