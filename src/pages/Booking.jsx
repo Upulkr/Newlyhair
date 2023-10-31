@@ -17,6 +17,7 @@ function Booking() {
 
    
     emailJs.sendForm(serviceId, templateId, e.target, publicKey).then(
+    
       (result) => {
         console.log(result.text);
         toast.success("Well done");
@@ -25,11 +26,14 @@ function Booking() {
         console.log(error.text);
         toast.error("not submitted");
       }
+    
     );
+
   };
   return (
     <>
       <div className="grid-row-2  grid bg-white dark:bg-black  ">
+      <ToastContainer />
         <div className=" mt-14 justify-center p-10 ">
           <h1 className="  text-center text-2xl font-extrabold  dark:text-white ">
             Book an appointment
