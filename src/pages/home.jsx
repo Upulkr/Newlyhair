@@ -8,10 +8,19 @@ import ChatBox from "./ChatBox";
 import Example from "./NewServices";
 import Testomonials from "./Testomonials";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import HeroSection from "./HeroSection";
+import Call from "./Call";
+import Saloon from "./Saloon";
+
+
 export function Home() {
   return (
+
+ 
     <div className="">
-      <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white  ">
+    <HeroSection/>
+ 
+      {/* <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white  ">
       <LazyLoadImage 
             alt="bg image"
             className="h-w-full object-contain mt-5 sm:max-h bg-white  "
@@ -25,19 +34,15 @@ export function Home() {
             <Typography variant="lead" color="balck" className="">
               Welcome to hair and body Therapy Salon!
             </Typography>
-            {/* <div className="">
-              <h1 className="  text-center text-3xl font-black text-black hidden sm:block">
-                These services are for you
-              </h1>
-            </div> */}
+         
           </div>
         </div>
-      </div>
-      {/* <Video /> */}
+      </div> */}
+ <Saloon/>
       <section className=" m-9  bg-white  ">
         <Example />
       </section>
-
+    
       <section className="m-7 px-4 pb-10 pt-4 bg-white ">
         <div className="container mx-auto">
           <Typography
@@ -48,6 +53,8 @@ export function Home() {
             Our happy clients say about us
           </Typography>
         </div>
+
+
         <Testomonials />
         {/* <div >
           {Customers.map(({ comment }) => (
@@ -86,8 +93,8 @@ export function Home() {
           </div>
         </div>
       </section>
-
-      <div className="bg-blue-gray-900 bg-white ">
+<Call/>
+      <div className=" bg-white ">
         <Footer />
         {/* <div>  <OpenHours  key={id}
             id={id}
@@ -98,6 +105,7 @@ export function Home() {
       <div>
         <ChatBox />
       </div>
+  
     </div>
   );
 }

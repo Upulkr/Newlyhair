@@ -9,14 +9,11 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export default function Header() {
-  const [click, setClick] = useState(false);
+
 
   const [open, setOpen] = useState(false);
 
-  const underLine = () => {
-    setClick(!click);
-    // setClick(false)
-  };
+
 
   React.useEffect(() => {
     window.addEventListener(
@@ -25,7 +22,7 @@ export default function Header() {
     );
   }, []);
   return (
-    <header className="bg-white font-sans shadow-md  ">
+    <header className="font-sans shadow-md ">
       <section class="max-sm:flex-col max-lg:min-h-[60px]  relative flex items-center border-b border-gray-200 px-10 py-3 lg:min-h-[80px] lg:justify-center">
         <Link to="/" class="max-md:w-full max-sm:mb-4">
           <img src="/img/logo.png" alt="logo" class="w-36 md:w-[170px] " />

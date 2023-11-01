@@ -159,26 +159,12 @@ Footer.defaultProps = {
   ],
   copyright: (
     <>
-      Copyright © {year} Saloon Noya by{" "}
-      <a
-        href="https://www.creative-tim.com?ref=mtk"
-        target="_blank"
-        className="text-white transition-colors hover:text-blue-500"
-      >
-       Noya Team
-      </a>
-      .
+      Copyright © {year} Saloon Noya
     </>
   ),
 };
 
-// Footer.propTypes = {
-//   title: PropTypes.string,
-//   description: PropTypes.string,
-//   socials: PropTypes.arrayOf(PropTypes.object),
-//   menus: PropTypes.arrayOf(PropTypes.object),
-//   copyright: PropTypes.node,
-// };
+
 
 Footer.displayName = "/src/widgets/layout/footer.jsx";
 

@@ -30,7 +30,7 @@ function FooterTwo() {
               </div>
               {/* Products section */}
               <div className="">
-                <h6 className="dark:text-white mb-4 flex justify-center font-semibold uppercase md:justify-start  dark:text-white">
+                <h6 className=" mb-4 flex justify-center font-semibold uppercase md:justify-start  dark:text-white">
             Hair
                 </h6>
                 <p className="mb-4 dark:text-white">
@@ -74,13 +74,9 @@ function FooterTwo() {
                   Scalp Massage
                   </a>
                 </p>
-                <p>
-                  {/* <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                    Help
-                  </a> */}
-                </p>
+           
               </div>
-              {/* Contact section */}
+           
               <div>
                 <h6 className="bg-white dark:bg-black mb-4 flex justify-center font-semibold uppercase md:justify-start dark:text-white">
                   Contact
