@@ -10,6 +10,7 @@ import { Button } from "./atoms/Button";
 
 import { Slide, Zoom } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HeroSection = () => {
   const sliderRef = useRef();
@@ -36,23 +37,26 @@ const HeroSection = () => {
             key={index}
           >
             <Zoom className="h-full">
-              <Image
+         
+           <Image
                 className="h-1/2 w-full md:h-full md:w-[60%]"
                 alt="HeroImg1"
                 objectCover="object-cover"
                 image={renderProfileImg(index)}
               />
+              
+            
             </Zoom>
 
             <div className="bg-zinc-900 overflow-x absolute right-0 top-1/2 flex h-1/2 w-full flex-col justify-start gap-2 px-4 md:top-0 md:h-full md:w-[50%] md:justify-center md:gap-4 md:px-6 lg:gap-8 lg:px-20">
               <Text
                 as="h1"
-                className="text-zinc-100 mt-10 text-4xl font-extrabold md:mt-10 md:text-5xl lg:text-6xl text-600"
+                className="text-zinc-100 mt-10 text-4xl font-extrabold md:mt-10 md:text-5xl lg:text-6xl text-600 text-green-900"
               >
                 <Slide direction="right">{hero.Heading}</Slide>
               </Text>
               <Text as="h3" className="text-zinc-400 my-4 text-base lg:text-lg">
-                <Slide direction="left">{hero.Paragraph}</Slide>
+                <Slide direction="left" className='text-black-900 text-4xl font-extrabold'>{hero.Paragraph}</Slide>
               </Text>
               <div className="flex items-center gap-8">
                 <Slide direction="up">

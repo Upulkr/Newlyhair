@@ -1,6 +1,7 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 
+import { Slide, Zoom } from "react-awesome-reveal";
 export default function Example({img}) {
     return (
       <div className="relative overflow-hidden bg-white dark:bg-black">
@@ -8,7 +9,7 @@ export default function Example({img}) {
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
             <div className="sm:max-w-lg">
               <h1 className=" dark:text-white text-4xl font-bold tracking-tight text-gray-900 sm:text-6x  dark:text-whitel">
-             Salon Toronto - Where Wellness Comes to You
+             <Slide direction="left"> Salon Toronto - Where Wellness Comes to You</Slide>
               </h1>
               <p className="mt-4 text-xl text-gray-500  dark:text-white">
                 This year, our new summer collection will shelter you from the harsh elements of a world that doesn't care
