@@ -6,25 +6,25 @@ import { List } from "./atoms/List";
 import { useCallback } from "react";
 import { Barbell, Hoodie, PersonSimpleRun } from "@phosphor-icons/react";
 import { Fade } from "react-awesome-reveal";
-
+import img1 from "../../public/img/icons/hair.png";
+import img2 from "../../public/img/icons/massage.png";
+import img3 from "../../public/img/icons/yoga.png";
 const Offers = () => {
   const renderIcon = useCallback((element) => {
     switch (element) {
-      case 0:
-        return (
-          <PersonSimpleRun size={50} color="currentColor" weight="light" />
-        );
-      case 1:
-        return <Barbell size={50} color="currentColor" weight="light" />;
-      case 2:
-        return <Hoodie size={50} color="currentColor" weight="light" />;
-      default:
-        return "";
-    }
+        case 0:
+          return img1;
+        case 1:
+          return img2;
+        case 2:
+          return img3;
+        default:
+          return "";
+      }
   }, []);
 
   return (
-    <section className="bg-zinc-900 flex h-auto w-full items-center">
+    <section className="bg-zinc-900 flex h-auto w-full items-center pb-10 mb-12 ">
       <main className="grid w-full items-center gap-10 md:grid-cols-2 md:gap-0 lg:h-[800px] lg:gap-0 ">
         <div className="grid h-[300px] w-full md:h-[800px]">
           <Image
@@ -51,16 +51,19 @@ const Offers = () => {
               </Text>
               {/* <Text as="h1" className="absolute text-zinc-500/10 lg:left-48 md:left-32 left-36 lg:text-9xl md:text-7xl text-6xl font-extrabold lg:-top-32 md:-top-20 -top-16 -z-10">02</Text> */}
             </div>
-            <ul className="flex flex-col gap-6 pb-16 lg:gap-8">
+            <ul className="flex flex-col gap-4 pb-12 lg:gap-5">
               {OfferTexts.list.map((item, index) => (
                 <List
-                  className="flex items-start justify-start gap-4 lg:gap-6"
+                  className="flex items-start justify-start gap-3 lg:gap-2 "
                   key={index}
                 >
-                  <Text as="span" className="text-amber-600 ">
-                    {renderIcon(index)}
-                  </Text>
-                  <div className="flex flex-col gap-1">
+                  <Image
+                className=""
+                alt="HeroImg1"
+                objectCover="object-cover"
+                image={renderIcon(index)}
+              />
+                  <div className="flex flex-col gap-1 ">
                     <Text
                       as="h3"
                       className="text-zinc-200 text-base font-semibold"

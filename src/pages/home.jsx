@@ -41,8 +41,8 @@ export function Home() {
         </div>
       </div> */}
  <Saloon/>
- <Offers/>
-      <section className=" m-9  bg-white  ">
+ <Offers />
+      <section className=" m-5 pt-12 bg-white  ">
         <Example />
       </section>
     
