@@ -56,7 +56,7 @@ const HeroSection = () => {
                 <Slide direction="right">{hero.Heading}</Slide>
               </Text>
               <Text as="h3" className="text-zinc-400 my-4 text-base lg:text-lg">
-                <Slide direction="left" className='text-black-900 text-4xl font-extrabold'>{hero.Paragraph}</Slide>
+                <Slide direction="left" className='text-black-900 text-2xl xl:text-4xl font-extrabold'>{hero.Paragraph}</Slide>
               </Text>
               <div className="flex items-center gap-8">
                 <Slide direction="up">

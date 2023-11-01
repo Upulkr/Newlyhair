@@ -11,6 +11,8 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import HeroSection from "./HeroSection";
 import Call from "./Call";
 import Saloon from "./Saloon";
+import Offer from "./Offers";
+import Offers from "./Offers";
 
 
 export function Home() {
@@ -39,6 +41,7 @@ export function Home() {
         </div>
       </div> */}
  <Saloon/>
+ <Offers/>
       <section className=" m-9  bg-white  ">
         <Example />
       </section>

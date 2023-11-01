@@ -61,15 +61,15 @@ export const OfferTexts = {
     secondText: "All Our Offer",
     list: [
         {
-            listCaption: "Weight Loose Programs",
-            text: "Our personalized approach, expert guidance, and proven results will help you achieve your fitness goals. Take the first step towards a transformed body and lifestyle today.",
+            listCaption: "Hair treatments",
+            text: "Our personalized approach, expert guidance, and proven results will help you achieve your beauty goals. Take the first step towards a transformed body and lifestyle today.",
         },
         {
-            listCaption: "Body Building Programs",
-            text: "Our expert trainers will guide you through tailored workouts, helping you achieve your bodybuilding goals efficiently and safely.",
+            listCaption: "Body therapy",
+            text: "Our expert therapists will guide you through tailored workouts, helping you achieve your bodybuilding goals efficiently and safely.",
         }
         , {
-            listCaption: "Different Special Classes",
+            listCaption: "Yoga",
             text: "Take your workout to new heights with our high and intense Special Class, where you'll push your limits and achieve remarkable fitness results.",
         }
     ],
