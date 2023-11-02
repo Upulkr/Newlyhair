@@ -1,39 +1,81 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "@dotlottie/player-component";
 import FooterTwo from "./FooterTwo";
 import emailJs from "@emailjs/browser";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 function Booking() {
   const form = useRef();
   const serviceId = process.env.CONTACT_SERVICE_ID2;
   const templateId = process.env.CONTACT_TEMPLATE_ID2;
   const publicKey = process.env.CONTACT_PUBLIC_KEY2;
 
-  const sendEmail = (e) => {
+  const [formData, setFormData] = useState({});
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [records, setRecords] = useState([]);
+  const ref = useRef(null);
+  // const navigate = useNavigate();
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-   
-    emailJs.sendForm(serviceId, templateId, e.target, publicKey).then(
-    
-      (result) => {
-        console.log(result.text);
-        toast.success("Well done");
-      },
-      (error) => {
-        console.log(error.text);
-        toast.error("not submitted");
-      }
-    
-    );
+    try {
+      setLoading(true);
+      const res = await fetch("/api/auth/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await res.json();
+      console.log(data);
+      if (data.success === false) {
+        setLoading(false);
+        setError(data.message);
+        toast.error('already time is booked, or email is already existing. Please try again or call us');
+        setRecords([...records, formData]);
+        setFormData({
+          email: "",
+          time: "",
+          phone: "",
+          date:""
+        });
+        return;
+      } else {
+        emailJs.sendForm(serviceId, templateId, e.target, publicKey).then(
+          (result) => {
+            console.log(result.text);
+            toast.success(
+              " Your Booking was done successfully , please check your email"
+            );
+          },
+          (error) => {
+            console.log(error.text);
+            toast.error("not submitted");
+          }
+        );
+        setLoading(false);
 
+        // navigate("/");
+      }
+    } catch (error) {
+      setError(error.message);
+      setLoading(false);
+    }
   };
+  console.log(formData);
   return (
     <>
       <div className="grid-row-2  grid bg-white dark:bg-black  ">
-      <ToastContainer />
+        <ToastContainer />
         <div className=" mt-14 justify-center p-10 ">
           <h1 className="  text-center text-2xl font-extrabold  dark:text-white ">
             Book an appointment
@@ -55,8 +97,9 @@ function Booking() {
           <div className="flex items-center justify-center">
             <form
               className=" w-2/3 justify-center "
-              ref={form}
-              onSubmit={sendEmail}
+              ref={ref}
+              onSubmit={handleSubmit}
+              onChange={handleChange}
             >
               {" "}
               <div className="">
@@ -98,6 +141,7 @@ function Booking() {
                   Email Address
                 </label>
                 <input
+                  value={formData.email}
                   type="email"
                   name="email"
                   id="email"
@@ -115,6 +159,7 @@ function Booking() {
                       Date
                     </label>
                     <input
+                      value={formData.date}
                       type="date"
                       name="date"
                       id="date"
@@ -131,6 +176,7 @@ function Booking() {
                       Time
                     </label>
                     <input
+                      value={formData.time}
                       type="time"
                       name="time"
                       id="time"
@@ -140,11 +186,16 @@ function Booking() {
                 </div>
               </div>
               <div>
-                <button type='submi'className= "  hover:shadow-form w-full rounded-md bg-[#6A64F1] p-2 px-8 text-center text-base font-semibold text-white outline-none dark:text-white">
-                  Book Appointment
+                <button
+                  disabled={loading}
+                  type="submi"
+                  className="  hover:shadow-form w-full rounded-md bg-[#6A64F1] p-2 px-8 text-center text-base font-semibold text-white outline-none dark:text-white"
+                >
+                  {loading ? "Booking is processing" : "Book Appointment"}
                 </button>
               </div>
             </form>
+            {/* {error&&<p>{error}</p>} */}
           </div>
         </div>
       </div>
