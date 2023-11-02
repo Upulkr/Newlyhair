@@ -1,6 +1,6 @@
 import { useCallback, useRef } from "react";
 import { Image } from "./atoms/Image";
-import HeroImg1 from "./hero/scalp.png";
+import HeroImg1 from "./hero/scalp.jpg";
 import HeroImg2 from "./hero/hairbackground.jpg";
 import HeroImg3 from "./hero/a.jpg";
 import { HeroTexts } from "./particles/Data";
@@ -29,7 +29,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-auto w-full overflow-x-hidden">
+    <section className=" relative h-auto w-full overflow-x-hidden">
       <div ref={(slider) => (sliderRef.current = slider)} className="h-full">
         {HeroTexts.map((hero, index) => (
           <main
@@ -39,7 +39,7 @@ const HeroSection = () => {
             <Zoom className="h-full">
          
            <Image
-                className="h-1/2 w-full md:h-full md:w-[60%]"
+                className="overflow-y-hidden h-1/2 w-full md:h-full md:w-[60%]"
                 alt="HeroImg1"
                 objectCover="object-cover"
                 image={renderProfileImg(index)}
@@ -48,12 +48,12 @@ const HeroSection = () => {
             
             </Zoom>
 
-            <div className="bg-zinc-900 overflow-x absolute right-0 top-1/2 flex h-1/2 w-full flex-col justify-start gap-2 px-4 md:top-0 md:h-full md:w-[50%] md:justify-center md:gap-4 md:px-6 lg:gap-8 lg:px-20">
+            <div className=" overflow-y-hidden bg-zinc-900 overflow-x absolute right-0 top-1/2 flex h-1/2 w-full flex-col justify-start gap-2 px-4 md:top-0 md:h-full md:w-[50%] md:justify-center md:gap-4 md:px-6 lg:gap-8 lg:px-20">
               <Text
                 as="h1"
-                className="text-zinc-100 mt-10 text-4xl font-extrabold md:mt-10 md:text-5xl lg:text-6xl text-600 text-green-900"
+                className="text-zinc-100 mt-10 text-4xl font-extrabold md:mt-10 md:text-5xl lg:text-6xl text-600 text-deep-orange-900 drop-shadow-2xl"
               >
-                <Slide direction="right">{hero.Heading}</Slide>
+                <Slide direction="right" >{hero.Heading}</Slide>
               </Text>
               <Text as="h3" className="text-zinc-400 my-4 text-base lg:text-lg">
                 <Slide direction="left" className='text-black-900 text-2xl xl:text-4xl font-extrabold'>{hero.Paragraph}</Slide>

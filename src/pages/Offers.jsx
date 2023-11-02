@@ -1,14 +1,13 @@
-import { Image } from "./atoms/Image";
-import Offer from "../../public/img/call.jpg";
-import { Text } from "./atoms/Text";
-import { OfferTexts } from "./particles/Data";
-import { List } from "./atoms/List";
 import { useCallback } from "react";
-import { Barbell, Hoodie, PersonSimpleRun } from "@phosphor-icons/react";
 import { Fade } from "react-awesome-reveal";
+import Offer from "../../public/img/offer.jpg";
 import img1 from "../../public/img/icons/hair.png";
 import img2 from "../../public/img/icons/massage.png";
 import img3 from "../../public/img/icons/yoga.png";
+import { Image } from "./atoms/Image";
+import { List } from "./atoms/List";
+import { Text } from "./atoms/Text";
+import { OfferTexts } from "./particles/Data";
 const Offers = () => {
   const renderIcon = useCallback((element) => {
     switch (element) {

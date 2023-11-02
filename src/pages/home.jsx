@@ -19,7 +19,7 @@ export function Home() {
   return (
 
  
-    <div className="">
+    <div className="overflow-y-hidden">
     <HeroSection/>
  
       {/* <div className="  relative flex min-h-screen flex-col   bg-center sm:bg-cover  bg-white  ">
@@ -42,7 +42,7 @@ export function Home() {
       </div> */}
  <Saloon/>
  <Offers />
-      <section className=" m-5 pt-12 bg-white  ">
+      <section className=" m-5 pt-12 bg-white  overflow-y-hidden">
         <Example />
       </section>
     
@@ -66,8 +66,8 @@ export function Home() {
         </div> */}
       </section>
 
-      <section className=" bg-white  px-4 pb-20 pt-4">
-        <div className="container mx-auto">
+      <section className=" bg-white  px-4 pb-20 pt-4 overflow-y-hidden">
+        <div className="container mx-auto overflow-y-hidden">
           <Typography
             variant="h1"
             color="Black"
@@ -75,7 +75,7 @@ export function Home() {
           >
             MEET THE EXPERTS
           </Typography>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 bg-white ">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 bg-white overflow-y-hidden ">
             {teamData.map(({ img, name, position, socials, id }) => (
               <TeamCard
                 key={id}
@@ -97,7 +97,7 @@ export function Home() {
         </div>
       </section>
 <Call/>
-      <div className=" bg-white ">
+      <div className=" bg-white overflow-y-hidden">
         <Footer />
         {/* <div>  <OpenHours  key={id}
             id={id}

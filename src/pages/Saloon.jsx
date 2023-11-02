@@ -23,11 +23,11 @@ const Saloon = () => {
                         <Text as="p" className="text-zinc-400 text-justify text-base">{AboutTexts.paragraph1}</Text>
                     </Fade>
                 </div>
-                <div className="w-full md:h-[400px] h-[300px] md:order-2 order-1 grid grid-cols-3 grid-rows-3">
-                   <Image alt="Welcome Image" objectCover="object-cover" className="col-span-3 row-span-2 w-full h-full" image={Image1} />
-                    <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image2} />
+                <div className="w-full md:h-[400px] h-[300px] md:order-2 order-1 grid grid-cols-3 grid-rows-3 ">
+                   <Image alt="Welcome Image" objectCover="object-cover" className="'justify-end col-span-3 row-span-2 w-full h-full" image={Image1} />
+                    {/* <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image2} />
                     <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full border border-amber-500" image={Image3} />
-                    <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image4} />
+                    <Image alt="Welcome Image" objectCover="object-cover" className="w-full h-full" image={Image4} /> */}
                     
                 </div>
             </main>
